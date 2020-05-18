@@ -8,182 +8,182 @@
   </head>
   <body>
     <header>
+      <h1>Магазин готовых шаблонов</h1>
       <section>
         <h2 class="visually-hidden">Навигация по сайту</h2>
-          <nav>
-            <a href="index.html">
-              <img src="https://via.placeholder.com/150x100" alt="">
-            </a>
-            <ul>
-              <li>
-                <a href="index.html">Студия</a>
-              </li>
-              <li>
-                <a href="#">Клиенты</a>
-              </li>
-              <li>
-                <a href="inner.html">Магазин</a>
-              </li>
-              <li>
-                <a href="#">Контакты</a>
-              </li>
-            </ul>
-            <div>
-              <a href="#">Корзина</a>
-            </div>
-          </nav>
-        <h1>Магазин готовых шаблонов</h1>
+        <nav>
+          <a class="logo-nerds" href="index.html">
+            <img src="https://via.placeholder.com/150x100" alt="">
+          </a>
+          <ul>
+            <li>
+              <a href="index.html">Студия</a>
+            </li>
+            <li>
+              <a href="#">Клиенты</a>
+            </li>
+            <li>
+              <a href="#">Магазин</a>
+            </li>
+            <li>
+              <a href="#">Контакты</a>
+            </li>
+          </ul>
+          <div>
+            <a href="#">Корзина</a>
+          </div>
+        </nav>
       </section>
     </header>
     <main>
       <section>
         <h2 class="visually-hidden">Фильтр</h2>
-          <form action="https://echo.htmlacademy.ru" method="get">
-            <div>
-              <fieldset>
-                <legend>Стоимость:</legend>
-                <div class="range-filter">
-                  <div class="range-controls">
-                    <div class="scale">
-                      <div class="bar"></div>
-                    </div>
-                    <div class="toggle toggle-min"></div>
-                    <div class="toggle toggle-max"></div>
+        <form action="https://echo.htmlacademy.ru" method="get">
+          <div>
+            <fieldset>
+              <legend>Стоимость:</legend>
+              <div class="range-filter">
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar"></div>
                   </div>
-                  <div class="price-controls">
-                    <label class="min-price">от<input name="min-price" type="text" value="0"></label>
-                    <label class="max-price">до<input name="max-price" type="text" value="15000"></label>
-                  </div>
+                  <div class="toggle toggle-min"></div>
+                  <div class="toggle toggle-max"></div>
                 </div>
-              </fieldset>
-              <fieldset>
-                <legend>Сетка:</legend>
-                <div>
-                  <ul>
-                    <li>
-                      <input type="radio" name="grid" id="filter-adaptive" value="adaptive" checked="checked">
-                      <label for="filter-adaptive">Адаптивная</label>
-                    </li>
-                    <li>
-                      <input type="radio" name="grid" id="filter-fixed" value="fixed">
-                      <label for="filter-fixed">Фиксированная</label>
-                    </li>
-                    <li>
-                      <input type="radio" name="grid" id="filter-rubber" value="rubber">
-                      <label for="filter-rubber">Резиновая</label>
-                    </li>
-                  </ul>
+                <div class="price-controls">
+                  <label class="min-price">от<input name="min-price" type="text" value="0"></label>
+                  <label class="max-price">до<input name="max-price" type="text" value="15000"></label>
                 </div>
-              </fieldset>
-              <fieldset>
-                <legend>Особенности:</legend>
-                <div>
-                  <ul>
-                    <li>
-                      <input type="checkbox" name="features" id="filter-slider" value="slider" checked="checked">
-                      <label for="filter-slider">Слайдер</label>
-                    </li>
-                    <li>
-                      <input type="checkbox" name="features" id="filter-advantages" value="advantages">
-                      <label for="filter-advantages">Блок преимуществ</label>
-                    </li>
-                    <li>
-                      <input type="checkbox" name="features" id="filter-news" value="news" checked="checked">
-                      <label for="filter-news">Новости</label>
-                    </li>
-                    <li>
-                      <input type="checkbox" name="features" id="filter-gallery" value="gallery">
-                      <label for="filter-gallery">Галерея</label>
-                    </li>
-                    <li>
-                      <input type="checkbox" name="features" id="filter-basket" value="basket">
-                      <label for="filter-basket">Корзина</label>
-                    </li>
-                  </ul>
-                  <button type="submit" name="button">Показать</button>
-                </div>
-              </fieldset>
-            </div>
-          </form>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>Сетка:</legend>
+              <div>
+                <ul>
+                  <li>
+                    <input type="radio" name="grid" id="filter-adaptive" value="adaptive" checked="checked">
+                    <label for="filter-adaptive">Адаптивная</label>
+                  </li>
+                  <li>
+                    <input type="radio" name="grid" id="filter-fixed" value="fixed">
+                    <label for="filter-fixed">Фиксированная</label>
+                  </li>
+                  <li>
+                    <input type="radio" name="grid" id="filter-rubber" value="rubber">
+                    <label for="filter-rubber">Резиновая</label>
+                  </li>
+                </ul>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>Особенности:</legend>
+              <div>
+                <ul>
+                  <li>
+                    <input type="checkbox" name="features" id="filter-slider" value="slider" checked="checked">
+                    <label for="filter-slider">Слайдер</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="features" id="filter-advantages" value="advantages">
+                    <label for="filter-advantages">Блок преимуществ</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="features" id="filter-news" value="news" checked="checked">
+                    <label for="filter-news">Новости</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="features" id="filter-gallery" value="gallery">
+                    <label for="filter-gallery">Галерея</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="features" id="filter-basket" value="basket">
+                    <label for="filter-basket">Корзина</label>
+                  </li>
+                </ul>
+                <button type="submit" name="button">Показать</button>
+              </div>
+            </fieldset>
+          </div>
+        </form>
       </section>
       <section>
         <h2 class="visually-hidden">Каталог Шаблонов</h2>
+        <div>
+          <p>Сортировать:</p>
           <div>
-            <p>Сортировать:</p>
-            <div>
-              <ul>
-                <li>
-                  <a>По цене</a>
-                </li>
-                <li>
-                  <a href="#">По типу</a>
-                </li>
-                <li>
-                  <a href="#">По названию</a>
-                </li>
-              </ul>
-            </div>
-            <div> <!--каталог шаблонов-->
-              <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
-            </div>
-            <div> <!--пагинация-->
-              <ul>
-                <li>
-                  <a href="#">1</a>
-                </li>
-                <li>
-                  <a href="#">2</a>
-                </li>
-                <li>
-                  <a href="#">3</a>
-                </li>
-              </ul>
-            </div>
+            <ul>
+              <li>
+                <a>По цене</a>
+              </li>
+              <li>
+                <a href="#">По типу</a>
+              </li>
+              <li>
+                <a href="#">По названию</a>
+              </li>
+            </ul>
           </div>
+          <div> <!--каталог шаблонов-->
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+          <div> <!--пагинация-->
+            <ul>
+              <li>
+                <a href="#">1</a>
+              </li>
+              <li>
+                <a href="#">2</a>
+              </li>
+              <li>
+                <a href="#">3</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </section>
       <section>
         <h2>Схема проезда</h2>
-          <img src="https://via.placeholder.com/150x100" alt="">
-            <section>
-              <h3>Nёrds design studio</h3>
-                <address>
-                  191186, Санкт-Петербург,<br>
-                  ул.Б.Конюшенная,д. 19.8
-                </address>
-                <p>
-                  тел:
-                  <a href="#">+7(812)275-75-75</a>
-                </p>
-            </section>
+        <img src="https://via.placeholder.com/150x100" alt="">
+          <section>
+            <h3>Nёrds design studio</h3>
+              <address>
+                191186, Санкт-Петербург,<br>
+                ул.Б.Конюшенная,д. 19.8
+              </address>
+              <p>
+                тел:
+                <a href="tel:+78122757575">+7(812)275-75-75</a>
+              </p>
+          </section>
       </section>
     </main>
     <footer>
       <section>
         <h2 class="visually-hidden">Нёрдс в социальных сетях</h2>
-          <ul>
-            <li>
-              <a href="https://vk.com/">
-                <img src="https://via.placeholder.com/150x100" alt="">
-              </a>
-            </li>
-            <li>
-              <a href="https://facebook.com/">
-                <img src="https://via.placeholder.com/150x100" alt="">
-              </a>
-            </li>
-            <li>
-              <a href="https://instagram.com/">
-                <img src="https://via.placeholder.com/150x100" alt="">
-              </a>
-            </li>
-          </ul>
+        <ul>
+          <li>
+            <a href="https://vk.com/">
+              <img src="https://via.placeholder.com/150x100" alt="">
+            </a>
+          </li>
+          <li>
+            <a href="https://facebook.com/">
+              <img src="https://via.placeholder.com/150x100" alt="">
+            </a>
+          </li>
+          <li>
+            <a href="https://instagram.com/">
+              <img src="https://via.placeholder.com/150x100" alt="">
+            </a>
+          </li>
+        </ul>
         </section>
         <div>
           <p>Давайте дружить, это выгодно!</p>
