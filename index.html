@@ -13,7 +13,7 @@
         <h2 class="visually-hidden">Навигация по сайту</h2>
         <nav>
           <a class="logo-nerds">
-            <img src="img/logo.png" width="100" height="50" alt="Нёрдс">
+            <img src="img\icons\logo.png" width="160" height="65" alt="Нёрдс">
           </a>
           <ul>
             <li>
@@ -71,19 +71,19 @@
         <ul>
           <li>
             <h3>Веб-сайты</h3>
-            <img alt="">
+            <img src="img\icons\illustration-1.png" alt="" width="300" height="146">
             <p>Мир никогда не будет прежним после того, как увидит ваш сайт!</p>
             <a href="#">Заказать</a>
           </li>
           <li>
             <h3>Приложения</h3>
-            <img alt="">
+            <img src="img\icons\illustration-2.png" alt="" width="300" height="146">
             <p>Покорите топ-10 приложений в AppStore и Google Play</p>
             <a href="#">Заказать</a>
           </li>
           <li>
             <h3>Презентации</h3>
-            <img alt="">
+            <img src="img\icons\illustration-3.png" alt="" width="300" height="146">
             <p>Вы даже не подозреваете, насколько вы изумительны!</p>
             <a href="#">Заказать</a>
           </li>
@@ -101,7 +101,7 @@
         </div>
         <div>
           <p>С 2004 года любим точность во всем:</p>
-          <img src="https://via.placeholder.com/150x100" alt="">
+          <img src="img\icons\nerds-illustration.png" alt="">
           <table>
             <tr>
               <td>146</td>
@@ -121,29 +121,29 @@
         <ul>
           <li>
             <a href="#" aria-label="HTML Academy">
-              <img src="https://via.placeholder.com/150x100" alt="">
+              <img src="img\icons\htmlacademy.png" alt="">
             </a>
           </li>
           <li>
             <a href="#" aria-label="Barbershop Borodinski">
-              <img src="https://via.placeholder.com/150x100" alt="">
+              <img src="img\icons\borodinski.png" alt="">
             </a>
           </li>
           <li>
             <a href="#" aria-label="Pink">
-              <img src="https://via.placeholder.com/150x100" alt="">
+              <img src="img\icons\pink.png" alt="">
             </a>
           </li>
           <li>
             <a href="#" aria-label="Mishka">
-              <img src="https://via.placeholder.com/150x100" alt="">
+              <img src="img\icons\mishka.png" alt="">
             </a>
           </li>
         </ul>
       </section>
       <section>
         <h2 class="visually-hidden">Схема проезда</h2>
-        <img src="https://via.placeholder.com/150x100" alt="">
+        <img src="img\icons\map.jpg" alt="Схема проезда">
           <section>
             <h3>Nёrds design studio</h3>
             <address>
@@ -163,17 +163,17 @@
         <ul>
           <li>
             <a href="https://vk.com/">
-              <img src="https://via.placeholder.com/150x100" alt="">
+              <img src="img\icons\vk.png" width="81" height="81" alt="вконтакте">
             </a>
           </li>
           <li>
             <a href="https://facebook.com/">
-              <img src="https://via.placeholder.com/150x100" alt="">
+              <img src="img\icons\fb.png" width="81" height="81" alt="фейсбук">
             </a>
           </li>
           <li>
             <a href="https://instagram.com/">
-              <img src="https://via.placeholder.com/150x100" alt="">
+              <img src="img\icons\inst.png" width="81" height="81" alt="инстаграм">
             </a>
           </li>
         </ul>
@@ -183,5 +183,18 @@
           <p>Скидка 10% для друзей из социальных сетей.</p>
         </div>
     </footer>
+    <section class="feedback">
+      <h2 class="facebook-title">Напишите нам</h2>
+      <button class="feedback-button-close btn" type="button" aria-label="Закрыть модально окно">x</button>
+        <form class="feedback-form" action="https://echo.htmlacademy.ru/courses" method="post">
+          <label for="name-field" class="visually-hidden">Имя Фамилия</label>
+          <input class="feedback-input" type="text" name="name" id="name-field" placeholder="Имя Фамилия">
+          <label for="email-field" class="visually-hidden">Имя Фамилия</label>
+          <input class="feedback-input" type="text" name="email" id="email-field" placeholder="email@example.com">
+          <textarea class="feedback-textarea" name="massage" id="massage" rows="8" cols="50" aria-label="Напишите нам" placeholder="В свободной форме">
+          </textarea>
+          <button class="feedback-button-send button" type="submit" name="feedback">Отправить</button>
+        </form>
+    </section>
   </body>
 </html>
