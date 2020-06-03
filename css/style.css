@@ -23,10 +23,12 @@
        url('/fonts/web/robotobold.woff') format('woff');
 }
 html {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 *, *::before, *::after {
-  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
 /**>*{
   outline: 1px solid #e5e5e5;
