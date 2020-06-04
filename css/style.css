@@ -30,11 +30,6 @@ html {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
 }
-/**>*{
-  outline: 1px solid #e5e5e5;
-}
-*/
-
 .visually-hidden {
   position: absolute;
   overflow: hidden;
@@ -69,6 +64,10 @@ a {
 .feedback p {
   margin-bottom: inherit;
 }
-html {
-  box-sizing: border-box;
+/**>*{
+  outline: 1px solid #e5e5e5;
+}
+*/
+:root {
+
 }
