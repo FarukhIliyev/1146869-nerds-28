@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Внутренняя страница | Дизайн студия "Нёрдс"</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -15,7 +16,7 @@
           <a class="page-logo" href="index.html">
             <img src="img/icons/logo.png" width="160" height="65" alt="Нёрдс">
           </a>
-          <ul class="site-navigation-list">
+          <ul class="site-navigation-list reset-list">
             <li class="site-navigation-item">
               <a class="site-navigation-link" href="#">Студия</a>
             </li>
@@ -29,7 +30,7 @@
               <a class="site-navigation-link" href="#">Контакты</a>
             </li>
           </ul>
-          <div class="page-nav-link-wrapper">
+          <div class="user-navigation">
             <a href="#">Корзина</a>
           </div>
         </nav>
@@ -57,7 +58,7 @@
           </fieldset>
           <fieldset class="filter-grid">
             <legend class="filter-grid-legend">Сетка:</legend>
-              <ul class="filter-grid-list">
+              <ul class="filter-grid-list reset-list">
                 <li class="filter-grid-item">
                   <input class="filter-grid-input" type="radio" name="grid" id="filter-adaptive" value="adaptive" checked="checked">
                   <label class="filter-grid-label" for="filter-adaptive">Адаптивная</label>
@@ -74,7 +75,7 @@
           </fieldset>
           <fieldset class="filter-features">
             <legend class="filter-features-legend">Особенности:</legend>
-              <ul class="filter-features">
+              <ul class="filter-features reset-list">
                 <li class="filter-features-item">
                   <input class="filter-features-input" type="checkbox" name="features" id="filter-slider" value="slider" checked="checked">
                   <label class="filter-features-label" for="filter-slider">Слайдер</label>
@@ -102,111 +103,111 @@
       </section>
       <section class="catalog">
         <h2 class="visually-hidden">Каталог Шаблонов</h2>
-        <div>
-          <p>Сортировать:</p>
-          <div>
-            <ul>
-              <li>
-                <a href="#">По цене</a>
-              </li>
-              <li>
-                <a href="#">По типу</a>
-              </li>
-              <li>
-                <a href="#">По названию</a>
-              </li>
-            </ul>
-            <ul>
-              <li>
-                <a href="#" aria-label="По умолчанию">
-                </a>
-              </li>
-              <li>
-                <a href="#" aria-label="По убыванию">
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div> <!--каталог шаблонов-->
-            <ul>
-              <li>
-                <img src="img/products/img-sedona.png" alt="Макет Седона" width="360" height="576">
-                <div>
-                  <h3>
-                    <a href="#">Sedona</a>
-                  </h3>
-                  <p>Информационный сайт для туристов</p>
-                  <a href="#">9 900 &#8381;</a>
-                </div>
-              </li>
-              <li>
-                <img src="img/products/img-pink.jpg" alt="Макет Пинк" width="360" height="576">
-                <div>
-                  <h3>
-                    <a href="#">Pink app</a>
-                  </h3>
-                  <p>Продуктовый лендинг приложения для iOS и Android</p>
-                  <a href="#">9 900 &#8381;</a>
-                </div>
-              </li>
-              <li>
-                <img src="img/products/img-borodinski.jpg" alt="Макет Бородинский" width="360" height="576">
-                <div>
-                  <h3>
-                    <a href="#">Barbershop</a>
-                  </h3>
-                  <p>Сайт салона красоты. Для мужчин, да.</p>
-                  <a href="#">9 900 &#8381;</a>
-                </div>
-              </li>
-              <li>
-                <img src="img/products/img-mishka.jpg" alt="Макет Мишка" width="360" height="576">
-                <div>
-                  <h3>
-                    <a href="#">Mishka</a>
-                  </h3>
-                  <p>Интернет-магазин вязаных игрушек</p>
-                  <a href="#">9 900 &#8381;</a>
-                </div>
-              </li>
-              <li>
-                <img src="img/products/img-aplus.jpg" alt="Макет А+" width="360" height="576">
-                <div>
-                  <h3>
-                    <a href="#">A plus</a>
-                  </h3>
-                  <p>Лендинг курсов повышения квалификации</p>
-                  <a href="#">9 900 &#8381;</a>
-                </div>
-              </li>
-              <li>
-                <img src="img/products/img-kvast.jpg" alt="Макет Кваст" width="360" height="576">
-                <div>
-                  <h3>
-                    <a href="#">Кваст</a>
-                  </h3>
-                  <p>Промо-сайт производителя крафтового кваса</p>
-                  <a href="#">9 900 &#8381;</a>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="pagination"> <!--пагинация-->
-            <ul class="paginarion-list">
-              <li class="pagination-item">
-                <a class="pagination-link">1</a>
-              </li>
-              <li class="pagination-item">
-                <a class="pagination-link" href="#">2</a>
-              </li>
-              <li class="pagination-item">
-                <a class="pagination-link" href="#">3</a>
-              </li>
-              <li class="pagination-item">
-                <a class="pagination-link" href="#">Следующая</a>
-              </li>
-            </ul>
-          </div>
+        <div class="catalog-sort">
+          <p class="catalog-sort-title">Сортировать:</p>
+          <ul class="catalog-sort-list reset-list">
+            <li class="catalog-sort-item">
+              <a class="catalog-sort-link" href="#">По цене</a>
+            </li>
+            <li class="catalog-sort-item">
+              <a class="catalog-sort-link" href="#">По типу</a>
+            </li>
+            <li class="catalog-sort-item">
+              <a class="catalog-sort-link" href="#">По названию</a>
+            </li>
+          </ul>
+        </div>
+        <div class="catalog-arrow">
+          <ul class="catalog-arrow-list reset-list">
+            <li class="catalog-arrow-item">
+              <a class="catalog-arrow-link" href="#" aria-label="По умолчанию">
+              </a>
+            </li>
+            <li class="catalog-arrow-item">
+              <a class="catalog-arrow-link" href="#" aria-label="По убыванию">
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="catalog-layout">
+          <ul class="catalog-layout">
+            <li class="catalog-layout-item">
+              <img class="catalog-layout-img" src="img/products/img-sedona.png" alt="Макет Седона" width="360" height="576">
+              <div class="catalog-layout-wrapper">
+                <h3 class="catalog-layout-title">
+                  <a class="catalog-layout-link-caption" href="#">Sedona</a>
+                </h3>
+                <p class="catalog-layout-text">Информационный сайт для туристов</p>
+                <a class="catalog-layout-link" href="#">9 900 &#8381;</a>
+              </div>
+            </li>
+            <li class="catalog-layout-item">
+              <img class="catalog-layout-img" src="img/products/img-pink.jpg" alt="Макет Пинк" width="360" height="576">
+              <div class="catalog-layout-wrapper">
+                <h3 class="catalog-layout-title">
+                  <a class="catalog-layout-link-caption" href="#">Pink app</a>
+                </h3>
+                <p class="catalog-layout-text">Продуктовый лендинг приложения для iOS и Android</p>
+                <a class="catalog-layout-link" href="#">9 900 &#8381;</a>
+              </div>
+            </li>
+            <li class="catalog-layout-item">
+              <img class="catalog-layout-img" src="img/products/img-borodinski.jpg" alt="Макет Бородинский" width="360" height="576">
+              <div class="catalog-layout-wrapper">
+                <h3 class="catalog-layout-title">
+                  <a class="catalog-layout-link-caption" href="#">Barbershop</a>
+                </h3>
+                <p class="catalog-layout-text">Сайт салона красоты. Для мужчин, да.</p>
+                <a class="catalog-layout-link" href="#">9 900 &#8381;</a>
+              </div>
+            </li>
+            <li class="catalog-layout-item">
+              <img class="catalog-layout-img" src="img/products/img-mishka.jpg" alt="Макет Мишка" width="360" height="576">
+              <div class="catalog-layout-wrapper">
+                <h3 class="catalog-layout-title">
+                  <a class="catalog-layout-link-caption" href="#">Mishka</a>
+                </h3>
+                <p class="catalog-layout-text">Интернет-магазин вязаных игрушек</p>
+                <a class="catalog-layout-link" href="#">9 900 &#8381;</a>
+              </div>
+            </li>
+            <li class="catalog-layout-item">
+              <img class="catalog-layout-img" src="img/products/img-aplus.jpg" alt="Макет А+" width="360" height="576">
+              <div class="catalog-layout-wrapper">
+                <h3 class="catalog-layout-title">
+                  <a class="catalog-layout-link-caption" href="#">A plus</a>
+                </h3>
+                <p class="catalog-layout-text">Лендинг курсов повышения квалификации</p>
+                <a class="catalog-layout-link" href="#">9 900 &#8381;</a>
+              </div>
+            </li>
+            <li class="catalog-layout-item">
+              <img class="catalog-layout-img" src="img/products/img-kvast.jpg" alt="Макет Кваст" width="360" height="576">
+              <div class="catalog-layout-wrapper">
+                <h3 class="catalog-layout-title">
+                  <a class="catalog-layout-link-caption" href="#">Кваст</a>
+                </h3>
+                <p class="catalog-layout-text">Промо-сайт производителя крафтового кваса</p>
+                <a class="catalog-layout-link" href="#">9 900 &#8381;</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="pagination"> <!--пагинация-->
+          <ul class="paginarion-list">
+            <li class="pagination-item">
+              <a class="pagination-link">1</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-link" href="#">2</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-link" href="#">3</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-link" href="#">Следующая</a>
+            </li>
+          </ul>
         </div>
       </section>
       <section class="map">
