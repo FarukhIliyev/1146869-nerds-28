@@ -2,7 +2,6 @@
   --basic-black: #000000;
   --basic-extra-dark: #FB565A;
   --basic-dark: #D7373B;
-  --basic-neutral: lightgray;
   --basic-extra-light: pink;
   --basic-white: #ffffff;
 }
@@ -94,5 +93,5 @@ img {
 }
 .site-navigation-list a:active,
 .user-navigation a:active {
-  color: var(--basic-neutral);
+  opacity: 0.3;
 }
