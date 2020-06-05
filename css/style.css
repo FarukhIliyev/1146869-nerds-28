@@ -3,7 +3,9 @@
   --basic-extra-dark: #FB565A;
   --basic-light-dark: #283136;
   --basic-dark: #D7373B;
-  --basic-extra-light: #EEEEEE;
+  --basic-light-silver: #EEEEEE;
+  --basic-silver: #DFDFDF;
+  --basic-silver-dark: #D5D5D5;
   --basic-white: #ffffff;
   --basic-light-red: #FB565A;
   --basic-red: #E74246;
@@ -16,6 +18,7 @@
   --basic-dark-yellow: #E5A722;
   --rare: #444444;
   --special: #666666;
+  --special-gray: #888888;
   --basic-light-gray: #E1E1E1;
 
 }
@@ -111,9 +114,15 @@ img {
 .site-wrapper {
   width: 1160px;
 }
-/*шапка*/
+.page-logo-img:hover,
+.page-logo-img:focus {
+  background: url(../img/icons/logo-guidance.png) no-repeat;
+}
+.page-logo-img:active {
+  background: url(../img/icons/logo-pressing.png) no-repeat;
+}
 .page-nav {
-  background-color: var(--basic-extra-light);
+  background-color: var(--basic-light-silver);
 }
 .site-navigation-list,
 .user-navigation {
@@ -124,7 +133,7 @@ img {
   font-style: normal;
 }
 .slider {
-  background-color: var(--basic-extra-light);
+  background-color: var(--basic-light-silver);
 }
 .slider-caption {
   font-size: 55px;
@@ -278,28 +287,28 @@ img {
   background: url(../img/icons/htmlacademy-guidance.png) no-repeat;
 }
 .clients-img-htmlacademy:active {
-  background: url(../img/icons/htmlacademy_pressing.png);
+  background: url(../img/icons/htmlacademy_pressing.png) no-repeat;
 }
 .clients-img-borodinski:hover,
 .clients-img-borodinski:focus {
   background: url(../img/icons/borodinski-guidance.png) no-repeat;
 }
 .clients-img-borodinski:active {
-  background: url(../img/icons/borodinski_pressing.png);
+  background: url(../img/icons/borodinski_pressing.png) no-repeat;
 }
 .clients-img-pink:hover,
 .clients-img-pink:focus {
   background: url(../img/icons/pink-guidance.png) no-repeat;
 }
 .clients-img-pink:active {
-  background: url(../img/icons/pink_pressing.png);
+  background: url(../img/icons/pink_pressing.png) no-repeat;
 }
 .clients-img-mishka:hover,
 .clients-img-mishka:focus {
   background: url(../img/icons/mishka-guidance.png) no-repeat;
 }
 .clients-img-mishka:active {
-  background: url(../img/icons/mishka_pressing.png);
+  background: url(../img/icons/mishka_pressing.png) no-repeat;
 }
 .map-contact-caption {
   font-size: 18px;
@@ -348,19 +357,81 @@ img {
   font-weight: normal;
   font-style: normal;
 }
+.filter-features-button {
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--basic-black);
+  font-weight: 500;
+  font-style: normal;
+  background-color: var(--basic-light-silver);
+  border: none;
+  border-radius: 3px;
+}
+.filter-features-button:hover,
+.filter-features-button:focus {
+  background-color: var(--basic-silver);
+}
+.filter-features-button:active {
+  background-color: var(--basic-silver-dark);
+}
+.catalog-sort-title {
+  font-size: 18px;
+  line-height: 30px;
+  color: var(--basic-black);
+  font-weight: bold;
+  font-style: normal;
+}
+.catalog-sort-link {
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--basic-black);
+  font-weight: normal;
+  font-style: normal;
+  opacity: 0.3;
+}
+.catalog-sort-link:hover,
+.catalog-sort-link:focus {
+  color: var(--basic-black);
+  opacity: 0.6;
+}
+.catalog-sort-link:active {
+  color: var(--basic-black);
+  opacity: 1;
+}
+.catalog-layout-link-caption {
+  font-size: 18px;
+  line-height: 30px;
+  color: var(--basic-black);
+  font-weight: bold;
+  font-style: normal;
+}
+.catalog-layout-text {
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--special);
+  font-weight: normal;
+  font-style: normal;
+}
+.catalog-layout-link {
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--basic-white);
+  font-weight: 500;
+  font-style: normal;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+.pagination-link {
+  color: var(--basic-black);
+  background-color: var(--basic-light-silver);
+}
+.pagination-link:hover,
+.pagination-link:focus {
+  background-color: var(--basic-silver);
+}
+.pagination-link:active {
+  background-color: var(--basic-white);
+  border: 2px solid var(--special-gray);
+}
 .footer-social-link {
   background-color: var(--basic-light-gray);
 }
@@ -398,6 +469,9 @@ img {
   color: var(--basic-black);
   font-weight: bold;
   font-style: normal;
+}
+.modal-input input::placeholder:hover {
+  border-color: var(--basic-light-silver);
 }
 .modal-button-send {
   font-size: 16px;
