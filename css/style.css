@@ -61,7 +61,7 @@ html {
   height: 1px;
   margin: -1px;
   padding: 0;
-  border: 0;
+  /*border: 0;*/
 }
 .reset-list {
   margin: 0;
@@ -95,26 +95,30 @@ img {
   outline: 1px solid #e5e5e5;
 }
 */
-
+/*--шапка--*/
 .site-navigation-list a,
 .user-navigation a {
   color: var(--basic-black);
 }
-.site-navigation-list a:hover,
-.site-navigation-list a:focus,
+.site-navigation-list a[href]:hover,
+.site-navigation-list a[href]:focus,
 .user-navigation a:hover,
 .user-navigation a:focus {
   color: var(--basic-extra-dark);
 }
-.site-navigation-list a:active,
-.user-navigation a:active {
-  opacity: 0.3;
+.site-navigation-list a[href]:active,
+.user-navigation a[href]:active {
+  color: var(--basic-light-gray);
 }
 .site-wrapper {
   width: 1160px;
 }
-.page-logo-img:active {
-  background: url("../img/icons/logo-pressing.png") no-repeat;
+.page-logo:hover,
+.page-logo:focus {
+  opacity: 1;
+}
+.page-logo:active {
+  opacity: 0.2;
 }
 .page-nav {
   background-color: var(--basic-light-silver);
@@ -126,8 +130,16 @@ img {
   color: var(--basic-black);
   font-weight: 500;
   font-style: normal;
+  text-transform: uppercase;
 }
-
+.page-main-title {
+  font-size: 55px;
+  line-height: 55px;
+  color: var(--basic-black);
+  font-weight: 500;
+  font-style: normal;
+}
+/*--слайдер--*/
 .slider {
   position: relative;
   background-color: var(--basic-light-silver);
@@ -258,12 +270,14 @@ img {
 .slider-link:active {
   background-color: var(--basic-dark-red);
 }
+/*--секция предложений--*/
 .offers-caption {
   font-size: 24px;
   line-height: 30px;
   color: var(--basic-black);
   font-weight: bold;
   font-style: normal;
+  text-transform: uppercase;
 }
 .offers-text {
   font-size: 16px;
@@ -278,7 +292,9 @@ img {
   color: var(--basic-white);
   font-weight: 500;
   font-style: normal;
+  text-transform: uppercase;
 }
+/*--кнопки--*/
 .button {
   font: inherit;
   text-align: center;
@@ -333,6 +349,8 @@ img {
   background-color: var(--basic-dark-yellow);
   box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
 }
+
+
 .company-caption {
   font-size: 45px;
   line-height: 45px;
@@ -353,6 +371,7 @@ img {
   color: var(--basic-light-dark);
   font-weight: bold;
   font-style: normal;
+  text-transform: uppercase;
 }
 .company-item {
   font-size: 16px;
@@ -367,6 +386,7 @@ img {
   color: var(--basic-black);
   font-weight: bold;
   font-style: normal;
+  text-transform: uppercase;
 }
 .figures {
   font-size: 45px;
@@ -383,6 +403,15 @@ img {
   font-style: normal;
 }
 
+
+/*
+.clients-list a {
+  opacity: 1;
+}
+.clients-list a:hover {
+  opacity: 0;
+}*--/
+/*--
 .clients-img-htmlacademy:hover,
 .clients-img-htmlacademy:focus {
   background: url(../img/icons/htmlacademy-guidance.png) no-repeat;
@@ -410,13 +439,14 @@ img {
 }
 .clients-img-mishka:active {
   background: url(../img/icons/mishka_pressing.png) no-repeat;
-}
+}--*/
 .map-contact-caption {
   font-size: 18px;
   line-height: 30px;
   color: var(--basic-black);
   font-weight: bold;
   font-style: normal;
+  text-transform: uppercase;
 }
 .map-contact-address {
   font-size: 16px;
@@ -442,6 +472,7 @@ img {
   color: var(--basic-black);
   font-weight: bold;
   font-style: normal;
+  text-transform: uppercase;
 }
 .filter-cost-label {
   font-size: 16px;
@@ -499,21 +530,21 @@ img {
   color: var(--basic-black);
   opacity: 1;
 }
-.catalog-layout-link-caption {
+.catalog-link-caption {
   font-size: 18px;
   line-height: 30px;
   color: var(--basic-black);
   font-weight: bold;
   font-style: normal;
 }
-.catalog-layout-text {
+.catalog-text {
   font-size: 16px;
   line-height: 18px;
   color: var(--special);
   font-weight: normal;
   font-style: normal;
 }
-.catalog-layout-link {
+.catalog-link {
   font-size: 16px;
   line-height: 18px;
   color: var(--basic-white);
