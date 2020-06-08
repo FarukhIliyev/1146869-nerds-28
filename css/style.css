@@ -382,6 +382,7 @@ img {
   font-weight: normal;
   font-style: normal;
 }
+
 .clients-img-htmlacademy:hover,
 .clients-img-htmlacademy:focus {
   background: url(../img/icons/htmlacademy-guidance.png) no-repeat;
@@ -545,7 +546,7 @@ img {
 }
 .footer-social-link:hover,
 .footer-social-link:focus {
-  background-color: var(--basic-red);
+  background-color: var(--basic-light-red);
 }
 .footer-social-link:active {
   background-color: var(--basic-red);
