@@ -310,6 +310,7 @@ img {
 .button:active {
   background-color: var(--basic-dark-red);
   box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+  color: var(--basic-light-gray);
 }
 .button-red {
   background-color: var(--basic-light-red);
@@ -347,8 +348,11 @@ img {
   background-color: var(--basic-dark-yellow);
   box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
 }
-
-
+.button-red:active,
+.button-green:active,
+.button-yellow:active {
+  color: var(--basic-light-gray);
+}
 .company-caption {
   font-size: 45px;
   line-height: 45px;
@@ -400,9 +404,6 @@ img {
   font-weight: normal;
   font-style: normal;
 }
-
-
-
 .clients-list a {
   opacity: 0.2;
 }
@@ -535,7 +536,6 @@ img {
   font-weight: 500;
   font-style: normal;
 }
-
 .pagination-link {
   color: var(--basic-black);
   background-color: var(--basic-light-silver);
@@ -548,7 +548,6 @@ img {
   background-color: var(--basic-white);
   border: 2px solid var(--special-gray);
 }
-
 .footer-social-link {
   display: flex;
   align-items: center;
@@ -571,7 +570,6 @@ img {
 .footer-social-link:active path{
   opacity: 0.3;
 }
-
 .footer-offering-title {
   font-size: 36px;
   line-height: 36px;
