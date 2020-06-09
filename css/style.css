@@ -46,12 +46,10 @@
        url('/fonts/robotobold.woff') format('woff');
 }
 html {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 *, *::before, *::after {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
+  box-sizing: inherit;
 }
 .visually-hidden {
   position: absolute;
