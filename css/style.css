@@ -404,42 +404,17 @@ img {
 }
 
 
-/*
+
 .clients-list a {
+  opacity: 0.2;
+}
+.clients-list a:hover,
+.clients-list a:focus {
   opacity: 1;
 }
-.clients-list a:hover {
-  opacity: 0;
-}*--/
-/*--
-.clients-img-htmlacademy:hover,
-.clients-img-htmlacademy:focus {
-  background: url(../img/icons/htmlacademy-guidance.png) no-repeat;
+.clients-list a:active {
+  opacity: 0.3;
 }
-.clients-img-htmlacademy:active {
-  background: url(../img/icons/htmlacademy_pressing.png) no-repeat;
-}
-.clients-img-borodinski:hover,
-.clients-img-borodinski:focus {
-  background: url(../img/icons/borodinski-guidance.png) no-repeat;
-}
-.clients-img-borodinski:active {
-  background: url(../img/icons/borodinski_pressing.png) no-repeat;
-}
-.clients-img-pink:hover,
-.clients-img-pink:focus {
-  background: url(../img/icons/pink-guidance.png) no-repeat;
-}
-.clients-img-pink:active {
-  background: url(../img/icons/pink_pressing.png) no-repeat;
-}
-.clients-img-mishka:hover,
-.clients-img-mishka:focus {
-  background: url(../img/icons/mishka-guidance.png) no-repeat;
-}
-.clients-img-mishka:active {
-  background: url(../img/icons/mishka_pressing.png) no-repeat;
-}--*/
 .map-contact-caption {
   font-size: 18px;
   line-height: 30px;
@@ -512,6 +487,17 @@ img {
   color: var(--basic-black);
   font-weight: bold;
   font-style: normal;
+}
+.catalog-link-caption {
+  color: inherit;
+  text-transform: uppercase;
+}
+.catalog-link-caption:hover,
+.catalog-link-caption:focus {
+  color: var(--basic-red);
+}
+.catalog-link-caption:active {
+  color: var(--basic-silver);
 }
 .catalog-sort-link {
   font-size: 14px;
