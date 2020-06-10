@@ -93,12 +93,6 @@ img {
   outline: 1px solid var(--basic-black);
 }
 .container {
-  width: 1440px;
-  height: 100%;
-  margin: 0 auto;
-  padding: 0;
-}
-.site-wrapper {
   width: 1160px;
   margin: 0 auto;
 }
@@ -166,10 +160,9 @@ img {
   position: relative;
   background-color: var(--basic-light-silver);
 }
-.slider-controls label {
+.slider-label {
   position: relative;
   display: inline-block;
-  width: 35px;
   height: 18px;
   padding: 17px;
   border-radius: 50%;
@@ -197,9 +190,45 @@ img {
   background: var(--basic-white);
   border-radius: 50%;
 }
-.slider-controls .slider-controls-item::before {
+.slide-list {
+  margin: 0;
+  padding: 0;
+}
+.slide-item {
+  display: none;
+  padding: 78px 0 80px 0;
+}
+.slide-item:nth-child(1) {
+  display: block;
+}
+.slide-item:nth-child(1) {
+  background-image: url("../img/icons/slide-expensive-and-meticulous.png");
+  background-repeat: no-repeat;
+  background-position: 99% 1px;
+}
+.slide-item:nth-child(2) {
+  background-image: url("../img/icons/slide-love-math.png");
+  background-repeat: no-repeat;
+  background-position: 99% 1px;
+}
+.slide-item:nth-child(3) {
+  background-image: url("../img/icons/slide-only-hardcore.png");
+  background-repeat: no-repeat;
+  background-position: 99% 1px;
+}
+#product-1:checked ~ .slide-list .slide-item:nth-child(1) {
+  display: block;
+}
+#product-2:checked ~ .slide-list .slide-item:nth-child(2) {
+  display: block;
+}
+#product-3:checked ~ .slide-list .slide-item:nth-child(3) {
+  display: block;
+}
+#product-1:checked ~ .slider-controls .slider-label:nth-child(1)::before,
+#product-2:checked ~ .slider-controls .slider-label:nth-child(2)::before,
+#product-3:checked ~ .slider-controls .slider-label:nth-child(3)::before {
   content: "";
-
   position: absolute;
   left: 50%;
   top: 50%;
@@ -211,38 +240,12 @@ img {
   border: 2px solid var(--basic-silver-dark);
   border-radius: 50%;
 }
-.slider-list {
-  margin: 0;
-  padding: 0;
-}
-.slider-item {
-  display: none;
-  padding: 78px 0 80px 0;
-}
-.slider-item:nth-child(1) {
-  display: block;
-}
-.slider-item:nth-child(1) {
-  background-image: url("../img/icons/slide-expensive-and-meticulous.png");
-  background-repeat: no-repeat;
-  background-position: 99% 1px;
-}
-.slider-item:nth-child(2) {
-  background-image: url("../img/icons/slide-love-math.png");
-  background-repeat: no-repeat;
-  background-position: 99% 1px;
-}
-.slider-item:nth-child(3) {
-  background-image: url("../img/icons/slide-only-hardcore.png");
-  background-repeat: no-repeat;
-  background-position: 99% 1px;
-}
-.slider-item h3 {
+.slide-item h3 {
   max-width: 600px;
   margin: 0;
   margin-bottom: 27px;
 }
-.slider-item p {
+.slide-item p {
   max-width: 430px;
   margin: 0;
   margin-bottom: 38px;
@@ -261,35 +264,35 @@ img {
   border-radius: 3px;
   border: none;
 }
-.slider-title {
+.slide-title {
   font-size: 55px;
   line-height: 55px;
   color: var(--basic-black);
   font-weight: 500;
   font-style: normal;
 }
-.slider-text {
+.slide-text {
   font-size: 16px;
   line-height: 24px;
   color: var(--basic-light-dark);
   font-weight: normal;
   font-style: normal;
 }
-.slider-link {
+.slide-link {
   font-size: 16px;
   line-height: 24px;
   color: var(--basic-white);
   font-weight: normal;
   font-style: normal;
 }
-.slider-link {
+.slide-link {
   background-color: var(--basic-light-red);
 }
-.slider-link:hover,
-.slider-link:focus {
+.slide-link:hover,
+.slide-link:focus {
   background-color: var(--basic-red);
 }
-.slider-link:active {
+.slide-link:active {
   background-color: var(--basic-dark-red);
 }
 /*--секция предложений--*/
