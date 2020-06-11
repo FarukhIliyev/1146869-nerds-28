@@ -59,7 +59,7 @@ html {
   height: 1px;
   margin: -1px;
   padding: 0;
-  /*border: 0;*/
+  border: 0;
 }
 .reset-list {
   margin: 0;
@@ -89,19 +89,21 @@ img {
 .feedback p {
   margin-bottom: inherit;
 }
-*>*{
+/**>*{
   outline: 1px solid var(--basic-black);
-}
-.container {
-  width: 1160px;
-  margin: 0 auto;
-}
-/*--шапка--*/
-.page-header {
+}*/
+
+.page-header {                                                                  /*--шапка--*/
   display: block;
+  padding-top: 50px;
+  background-color: var(--basic-light-silver);
 }
 .page-main-title {
-  width: 745px;
+  padding-top: 80px;
+  padding-bottom: 115px;
+  margin: 0;
+  background-color: var(--basic-light-silver);
+  text-align: center;
 }
 .page-logo:hover,
 .page-logo:focus {
@@ -113,16 +115,19 @@ img {
 .page-nav {
   display: flex;
   justify-content: space-between;
-  background-color: var(--basic-light-silver);
 }
-.site-navigation-list {
+.site-navigation {
+  width: 1160px;
+  margin: 0 auto;
+}
+.site-navigation-list,
+.user-navigation {
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
 }
 .site-navigation-item {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  display: inline-block;
+  margin-right: 50px;
 }
 .site-navigation-list a,
 .user-navigation a {
@@ -154,11 +159,14 @@ img {
   font-weight: 500;
   font-style: normal;
 }
-/*--слайдер--*/
-.slider {
+.slider {                                                                       /*--слайдер--*/
   display: block;
   position: relative;
   background-color: var(--basic-light-silver);
+}
+.slider-container {
+  width: 1160px;
+  margin: 0 auto;
 }
 .slider-label {
   position: relative;
@@ -250,20 +258,6 @@ img {
   margin: 0;
   margin-bottom: 38px;
 }
-.button {
-  display: block;
-  width: 240px;
-  padding: 13px 0;
-  font-size: 16px;
-  line-height: 18px;
-  color: #ffffff;
-  text-transform: uppercase;
-  text-align: center;
-  text-decoration: none;
-  background-color: var(--basic-red);
-  border-radius: 3px;
-  border: none;
-}
 .slide-title {
   font-size: 55px;
   line-height: 55px;
@@ -282,7 +276,7 @@ img {
   font-size: 16px;
   line-height: 24px;
   color: var(--basic-white);
-  font-weight: normal;
+  font-weight: 500;
   font-style: normal;
 }
 .slide-link {
@@ -295,9 +289,11 @@ img {
 .slide-link:active {
   background-color: var(--basic-dark-red);
 }
-/*--секция предложений--*/
+                                                                                /*--секция предложений--*/
 .offers {
   display: block;
+  width: 1160px;
+  margin: 0 auto;
 }
 .offers-caption {
   font-size: 24px;
@@ -310,6 +306,8 @@ img {
 .offers-list {
   display: flex;
   justify-content: space-between;
+  margin-top: 82px;
+  padding-bottom: 80px;
 }
 .offers-item {
   width: 300px;
@@ -329,16 +327,38 @@ img {
   font-style: normal;
   text-transform: uppercase;
 }
-/*--кнопки--*/
+                                                                                /*--кнопки--*/
 .button {
-  font: inherit;
+  display: block;
+  width: 240px;
+  padding-top: 17px;
+  padding-bottom: 15px;
+  font-size: 16px;
+  line-height: 18px;
   text-align: center;
-  color: var(--basic-white);
-  vertical-align: middle;
   text-transform: uppercase;
+  text-decoration: none;
+  vertical-align: middle;
+  color: var(--basic-white);
   background-color: var(--basic-light-red);
-  border: none;
   border-radius: 3px;
+  border: none;
+}
+.button-red,
+.button-green,
+.button-yellow {
+  display: block;
+  width: 160px;
+  padding-top: 17px;
+  padding-bottom: 15px;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  border-radius: 3px;
+  border: none;
+
 }
 .button:hover,
 .button:focus {
@@ -351,7 +371,6 @@ img {
 }
 .button-red {
   background-color: var(--basic-light-red);
-  border-radius: 3px;
 }
 .button-red:hover,
 .button-red:focus {
@@ -363,7 +382,6 @@ img {
 }
 .button-green {
   background-color: var(--basic-light-green);
-  border-radius: 3px;
 }
 .button-green:hover,
 .button-green:focus {
@@ -375,7 +393,6 @@ img {
 }
 .button-yellow {
   background-color: var(--basic-light-yellow);
-  border-radius: 3px;
 }
 .button-yellow:hover,
 .button-yellow:focus {
@@ -390,8 +407,13 @@ img {
 .button-yellow:active {
   color: var(--basic-light-gray);
 }
+                                                                                /*--блок приципов--*/
 .company {
   display: flex;
+  width: 1160px;
+  margin: 0 auto;
+  padding-top: 30px;
+  padding-bottom: 80px;
 }
 .company-about {
   width: 660px;
@@ -454,6 +476,17 @@ img {
   font-weight: normal;
   font-style: normal;
 }
+                                                                                /*--бренды--*/
+.clients {
+  display: block;
+  width: 1160px;
+  margin: 0 auto;
+  margin-bottom: 80px;
+  padding-top: 40px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 48px;
+}
 .clients-list {
   display: flex;
   justify-content: space-around;
@@ -468,8 +501,12 @@ img {
 .clients-list a:active {
   opacity: 0.3;
 }
+                                                                                /*--карта--*/
 .map {
   position: relative;
+  display: block;
+  width: 1440px;
+  margin: 0 auto;
 }
 .map-contact {
   position: absolute;
@@ -514,6 +551,7 @@ img {
   font-style: normal;
   text-transform: uppercase;
 }
+                                                                                /*--фильтры--*/
 .filters {
   width: 260px;
   margin-right: 140px;
@@ -550,9 +588,14 @@ img {
 .filter-features-button:active {
   background-color: var(--basic-silver-dark);
 }
+                                                                                /*--каталог--*/
 .container-catalog {
   display: flex;
   flex-wrap: wrap;
+}
+.container {
+  width: 1160px;
+  margin: 0 auto;
 }
 .catalog-sort {
   width: 760px;
@@ -632,13 +675,17 @@ img {
   background-color: var(--basic-white);
   border: 2px solid var(--special-gray);
 }
+                                                                                /*--подвал--*/
 .footer {
   display: flex;
-  justify-content: space-around;
+  width: 1160px;
+  margin: 0 auto;
+  padding-top: 70px;
+  padding-bottom: 70px;
 }
 .footer-social {
   width: 260px;
-  margin-left: 140px;
+  margin-right: 140px;
 }
 .footer-social-list {
   display: flex;
@@ -670,8 +717,10 @@ img {
   opacity: 0.3;
 }
 .footer-offering-title {
+  width: 660px;
   font-size: 36px;
   line-height: 36px;
+  margin: 0;
   color: var(--basic-black);
   font-weight: bold;
   font-style: normal;
@@ -687,6 +736,7 @@ img {
   width: 81px;
   height: 81px;
 }
+                                                                                /*--модальное окно--*/
 .modal {
   display: none;
 }
