@@ -105,11 +105,11 @@ img {
   background-color: var(--basic-light-silver);
   text-align: center;
 }
-.page-logo:hover,
-.page-logo:focus {
+.page-logo[href]:hover,
+.page-logo[href]:focus {
   opacity: 1;
 }
-.page-logo:active {
+.page-logo[href]:active {
   opacity: 0.2;
 }
 .page-nav {
@@ -304,11 +304,15 @@ img {
   text-transform: uppercase;
 }
 .offers-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+/*.offers-list {
   display: flex;
   justify-content: space-between;
   margin-top: 82px;
   padding-bottom: 80px;
-}
+}*/
 .offers-item {
   width: 300px;
 }
@@ -623,6 +627,9 @@ img {
   margin-top: 94px;
   margin-right: 40px;
   margin-bottom: 80px;
+}
+.catalog-img {
+  border: 1px solid var(--basic-silver);
 }
 .catalog-item:nth-child(2n) {
   margin-right: 0;
