@@ -89,9 +89,9 @@ img {
 .feedback p {
   margin-bottom: inherit;
 }
-/**>*{
+*>*{
   outline: 1px solid var(--basic-black);
-}*/
+}
 
 .page-header {                                                                  /*--шапка--*/
   display: block;
@@ -295,30 +295,29 @@ img {
   width: 1160px;
   margin: 0 auto;
 }
+.offers-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 40px;
+  margin-top: 80px;
+  padding-bottom: 80px;
+}
+.offers-item {
+  width: 300px;
+}
 .offers-caption {
   font-size: 24px;
   line-height: 30px;
+  margin-bottom: 10px;
   color: var(--basic-black);
   font-weight: bold;
   font-style: normal;
   text-transform: uppercase;
 }
-.offers-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-/*.offers-list {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 82px;
-  padding-bottom: 80px;
-}*/
-.offers-item {
-  width: 300px;
-}
 .offers-text {
   font-size: 16px;
   line-height: 24px;
+  padding-right: 20px;
   color: var(--basic-light-dark);
   font-weight: normal;
   font-style: normal;
@@ -353,6 +352,7 @@ img {
 .button-yellow {
   display: block;
   width: 160px;
+  margin-top: 33px;
   padding-top: 17px;
   padding-bottom: 15px;
   font-size: 16px;
@@ -413,7 +413,9 @@ img {
 }
                                                                                 /*--блок приципов--*/
 .company {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
   width: 1160px;
   margin: 0 auto;
   padding-top: 30px;
@@ -429,6 +431,7 @@ img {
   color: var(--basic-black);
   font-weight: 500;
   font-style: normal;
+  margin-bottom: 32px;
 }
 .company-text {
   font-size: 16px;
@@ -438,8 +441,11 @@ img {
   font-style: normal;
 }
 .company-text-title {
+  margin-bottom: 0;
+  padding-top: 24px;
+  padding-bottom: 15px;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 25px;
   color: var(--basic-light-dark);
   font-weight: bold;
   font-style: normal;
@@ -447,31 +453,56 @@ img {
 }
 .company-list {
   width: 660px;
+  margin-top: 8px;
 }
 .company-item {
+  padding-left: 36px;
+  padding-bottom: 22px;
   font-size: 16px;
   line-height: 24px;
   color: var(--basic-light-dark);
   font-weight: normal;
   font-style: normal;
 }
+.company-img {
+  margin-top: 10px;
+}
 .company-title {
+  display: block;
   font-size: 16px;
   line-height: 24px;
   color: var(--basic-black);
   font-weight: bold;
   font-style: normal;
   text-transform: uppercase;
+  margin-top: 36px;
 }
 .company-statistics {
   width: 360px;
+  text-align: center;
+}
+.company-table {
+  margin-top: 26px;
 }
 .figures {
   font-size: 45px;
-  line-height: 64px;
+  line-height: 73px;
   color: var(--basic-black);
   font-weight: bold;
   font-style: normal;
+}
+.figures th {
+  position: relative;
+  width: 200px;
+  text-align: left;
+}
+.figures sup {
+  position: absolute;
+  font-size: 25px;
+  top: 30px;
+}
+.indicators td {
+  text-align: left;
 }
 .indicators {
   font-size: 16px;
@@ -485,6 +516,7 @@ img {
   display: block;
   width: 1160px;
   margin: 0 auto;
+  padding: 0;
   margin-bottom: 80px;
   padding-top: 40px;
   padding-left: 30px;
@@ -493,7 +525,8 @@ img {
 }
 .clients-list {
   display: flex;
-  justify-content: space-around;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .clients-list a {
   opacity: 0.2;
