@@ -123,7 +123,7 @@ img {
 .site-navigation-list,
 .user-navigation {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
 }
 .site-navigation-item {
   display: inline-block;
@@ -291,9 +291,9 @@ img {
 }
                                                                                 /*--секция предложений--*/
 .offers {
-  display: block;
   width: 1160px;
   margin: 0 auto;
+  border-bottom: 2px solid var(--basic-silver);
 }
 .offers-list {
   display: grid;
@@ -419,7 +419,8 @@ img {
   width: 1160px;
   margin: 0 auto;
   padding-top: 30px;
-  padding-bottom: 80px;
+  padding-bottom: 60px;
+  border-bottom: 2px solid var(--basic-silver);
 }
 .company-about {
   width: 660px;
@@ -513,7 +514,6 @@ img {
 }
                                                                                 /*--бренды--*/
 .clients {
-  display: block;
   width: 1160px;
   margin: 0 auto;
   padding: 0;
@@ -522,11 +522,12 @@ img {
   padding-left: 30px;
   padding-right: 30px;
   padding-bottom: 48px;
+  border-bottom: 2px solid var(--basic-silver);
 }
 .clients-list {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 .clients-list a {
   opacity: 0.2;
@@ -547,7 +548,8 @@ img {
 }
 .map-contact {
   position: absolute;
-  top: 60px;
+  top: 50px;
+  left: 140px;
   width: 320px;
   height: 310px;
   z-index: 30;
@@ -557,6 +559,8 @@ img {
 .map-contact-caption {
   font-size: 18px;
   line-height: 30px;
+  margin-top: 10px;
+  margin-bottom: 23px;
   color: var(--basic-black);
   font-weight: bold;
   font-style: normal;
@@ -573,6 +577,8 @@ img {
   color: var(--special);
 }
 .map-contact-button {
+  width: 219px;
+  margin-top: 39px;
   font-size: 16px;
   line-height: 18px;
   color: var(--basic-white);
@@ -599,6 +605,10 @@ img {
   color: var(--basic-light-dark);
   font-weight: normal;
   font-style: normal;
+}
+.filter-cost-legend {
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .filter-grid-label,
 .filter-features-label {
@@ -638,26 +648,29 @@ img {
   width: 760px;
 }
 .sort {
-  display: inline;
+  display: flex;
+  justify-content: space-between;
   width: 760px;
+  margin-top: 60px;
+  margin-bottom: 90px;
 }
 .sort-title {
   width: 134px;
   margin: 0;
+  font-weight: bold;
+  font-style: normal;
+  text-transform: uppercase;
 }
 .sort-list {
   display: flex;
+  justify-content: space-around;
   width: 272px;
-}
-.catalog-arrow {
-
 }
 .catalog {
   display: flex;
   flex-wrap: wrap;
 }
 .catalog-item {
-  margin-top: 94px;
   margin-right: 40px;
   margin-bottom: 80px;
 }
@@ -666,7 +679,9 @@ img {
 }
 .catalog-item:nth-child(2n) {
   margin-right: 0;
-
+}
+.catalog-wrapper {
+  display: none;
 }
 .catalog-text {
   width: 255px;
@@ -733,6 +748,13 @@ img {
   color: var(--basic-white);
   font-weight: 500;
   font-style: normal;
+}
+.pagination {
+  width: 443px;
+}
+.pagination-list {
+  display: flex;
+  justify-content: space-around;
 }
 .pagination-link {
   color: var(--basic-black);
