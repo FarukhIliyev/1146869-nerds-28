@@ -119,10 +119,7 @@ img {
 .page-logo[href]:active {
   opacity: 0.2;
 }
-.page-nav {
-  display: flex;
-  justify-content: space-between;
-}
+
 .site-navigation-item {
   margin-right: 46px;
 }
@@ -156,8 +153,13 @@ img {
   font-style: normal;
   text-transform: uppercase;
 }
-.site-navigation-list {
-  margin-right: 37px;
+.page-nav {
+  display: grid;
+  grid-template-columns: 160px 438px 74px;
+  column-gap: 202px;
+}
+.user-navigation {
+  margin-left: 84px;
 }
 .slider {                                                                       /*--слайдер--*/
   display: block;
@@ -202,9 +204,9 @@ img {
   display: none;
   padding: 78px 0 80px 0;
 }
-.slide-item:nth-child(1) {
+/*.slide-item:nth-child(1) {
   display: block;
-}
+}*/
 .slide-item:nth-child(1) {
   background-image: url("../img/icons/slide-expensive-and-meticulous.png");
   background-repeat: no-repeat;
@@ -220,13 +222,13 @@ img {
   background-repeat: no-repeat;
   background-position: 99% 1px;
 }
-#product-1:checked ~ .slide-list .slide-item:nth-child(1) {
+#product-1:checked ~ .slides .slide-item:nth-child(1) {
   display: block;
 }
-#product-2:checked ~ .slide-list .slide-item:nth-child(2) {
+#product-2:checked ~ .slides .slide-item:nth-child(2) {
   display: block;
 }
-#product-3:checked ~ .slide-list .slide-item:nth-child(3) {
+#product-3:checked ~ .slides .slide-item:nth-child(3) {
   display: block;
 }
 #product-1:checked ~ .slider-controls .slider-label:nth-child(1)::before,
@@ -410,7 +412,7 @@ img {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 20px;
-  padding-top: 30px;
+  padding-top: 26px;
   padding-bottom: 60px;
   border-bottom: 2px solid var(--basic-silver);
 }
@@ -507,11 +509,11 @@ img {
                                                                                 /*--бренды--*/
 .clients {
   padding: 0;
-  margin-bottom: 80px;
+  margin-bottom: 84px;
   padding-top: 40px;
   padding-left: 30px;
   padding-right: 30px;
-  padding-bottom: 48px;
+  padding-bottom: 40px;
   border-bottom: 2px solid var(--basic-silver);
 }
 .clients-list {
@@ -538,7 +540,7 @@ img {
 }
 .map-contact {
   position: absolute;
-  top: 50px;
+  top: 52px;
   left: 140px;
   width: 320px;
   height: 310px;
@@ -751,7 +753,6 @@ img {
 }
 .pagination-list {
   display: flex;
-  justify-content: space-around;
 }
 .pagination-link {
   color: var(--basic-black);
@@ -777,7 +778,6 @@ img {
 }
 .footer-social-list {
   display: flex;
-  justify-content: space-between;
 }
 .footer-offering {
   width: 560px;
@@ -823,8 +823,11 @@ img {
 .footer-social-item {
   width: 81px;
   height: 81px;
+  margin-right: 9px;
 }
-                                                                                /*--модальное окно--*/
+.footer-social-item:nth-child(3n) {
+    margin: 0;
+}                                                                                /*--модальное окно--*/
 .modal {
   display: none;
 }
