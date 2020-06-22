@@ -33,7 +33,7 @@
             </li>
           </ul>
           <div class="user-navigation">
-            <a href="#">Корзина</a>
+            <a class="user-navigation-link" href="#">Корзина</a>
           </div>
         </nav>
       </section>
@@ -51,16 +51,18 @@
                   <div class="scale">
                     <div class="bar"></div>
                   </div>
-                  <div class="toggle toggle-min"></div>
-                  <div class="toggle toggle-max"></div>
+                  <div class="toggle toggle-min" tabindex="0"></div>
+                  <div class="toggle toggle-max" tabindex="0"></div>
                 </div>
                 <div class="price-controls">
                   <label class="filter-cost-label min-price">
                     от
-                    <input name="min-price" type="text" value="0"></label>
+                    <input name="min-price" type="number" value="0">
+                  </label>
                   <label class="filter-cost-label max-price">
                     до
-                    <input name="max-price" type="text" value="15000"></label>
+                    <input name="max-price" type="number" value="15000">
+                  </label>
                 </div>
               </div>
             </fieldset>

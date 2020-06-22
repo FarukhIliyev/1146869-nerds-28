@@ -89,9 +89,9 @@ img {
 .feedback p {
   margin-bottom: inherit;
 }
-*>*{
+/**>*{
   outline: 1px solid var(--basic-black);
-}
+}*/
 .container {
   width: 1160px;
   margin: 0 auto;
@@ -106,8 +106,9 @@ img {
   color: var(--basic-black);
   font-weight: 500;
   font-style: normal;
-  padding-top: 80px;
-  padding-bottom: 115px;
+  margin-left: 20px;
+  padding-top: 74px;
+  padding-bottom: 108px;
   margin: 0;
   background-color: var(--basic-light-silver);
   text-align: center;
@@ -119,7 +120,29 @@ img {
 .page-logo[href]:active {
   opacity: 0.2;
 }
+.page-nav {
+  display: grid;
+  grid-template-columns: 160px 438px 74px;
+  column-gap: 202px;
+}
+.user-navigation {
+  margin-left: 42px;
+}
+.user-navigation-link::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 1px;
+  width: 15px;
+  height: 15px;
+  background-image: url("../img/icons/cart-icon.svg");
+  background-repeat: no-repeat;
 
+}
+.user-navigation .user-navigation-link {
+  position: relative;
+  padding-left: 42px;
+}
 .site-navigation-item {
   margin-right: 46px;
 }
@@ -153,15 +176,8 @@ img {
   font-style: normal;
   text-transform: uppercase;
 }
-.page-nav {
-  display: grid;
-  grid-template-columns: 160px 438px 74px;
-  column-gap: 202px;
-}
-.user-navigation {
-  margin-left: 84px;
-}
-.slider {                                                                       /*--слайдер--*/
+                                                                                /*--слайдер--*/
+.slider {
   display: block;
   position: relative;
   background-color: var(--basic-light-silver);
@@ -591,8 +607,60 @@ img {
   width: 260px;
   margin-right: 140px;
 }
-.filter-grid-input {
+.filter-cost,
+.filter-grid,
+.filter-features {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+.filter-grid-input,
+.filter-features-input {
   display: none;
+}
+.filter-cost-legend {
+  padding-top: 63px;
+}
+.range-filter {
+  width: 260px;
+  margin-top: 49px;
+}
+.range-controls {
+  position: relative;
+  height: 80px;
+  margin-bottom: 15px;
+  padding-top: 39px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: var(--basic-light-silver);
+  border-radius: 5px;
+}
+.range-controls .scale {
+  height: 2px;
+  background: var(--basic-silver);
+}
+.range-controls .bar {
+  width: 70%;
+  height: 2px;
+  background: var(--basic-green);
+}
+.range-controls .toggle {
+  position: absolute;
+  top: 31px;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  background-color: var(--basic-silver-dark);
+  border: 8px solid var(--basic-white);
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 var(--basic-silver-dark);
+  cursor: pointer;
+}
+.range-controls .toggle-min {
+  left: 18px;
+}
+.range-controls .toggle-max {
+  left: 160px;
 }
 .filter-cost-label {
   font-size: 16px;
@@ -601,10 +669,73 @@ img {
   font-weight: normal;
   font-style: normal;
 }
-.filter-cost-legend {
+.price-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 62px;
+}
+.price-controls label {
+  text-transform: uppercase;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 16px;
+}
+.price-controls input {
+  width: 80px;
+  padding: 10px;
+  margin-left: 10px;
+  text-align: center;
+  color: var(--basic-light-dark);
+  border: none;
+  border-radius: 5px;
+  background: var(--basic-light-silver);
+  font-family: inherit;
+  font-size: inherit;
+}
+.filter-grid-legend,
+.filter-features-legend {
+  padding-bottom: 22px;
+}
+.filter-grid-list {
+  padding-bottom: 51px;
+}
+.filter-features {
+  padding-bottom: 48px;
+}
+.filter-features-button {
+  width: 260px;
+  height: 50px;
+}
+.filter-grid-item,
+.filter-features-item {
+  position: relative;
+  padding-left: 36px;
+  padding-bottom: 25px;
+}
+.filter-grid-label::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: -5px;
+  left: 0;
+  background-image: url("../img/icons/radio-off.svg");
+  opacity: 0.4;
+}
+.filter-features-label::before {
+  content: "";
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  top: 0;
+  left: 0;
+  background-image: url("../img/icons/checkbox-off.svg");
+  opacity: 0.4;
+}
+
+/*.filter-cost-legend {
   padding-top: 60px;
   padding-bottom: 60px;
-}
+}*/
 .filter-grid-label,
 .filter-features-label {
   font-size: 16px;
@@ -829,7 +960,7 @@ img {
   margin-right: 9px;
 }
 .footer-social-item:nth-child(3n) {
-    margin: 0;
+  margin: 0;
 }                                                                                /*--модальное окно--*/
 .modal {
   display: none;
