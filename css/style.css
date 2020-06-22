@@ -591,6 +591,9 @@ img {
   width: 260px;
   margin-right: 140px;
 }
+.filter-grid-input {
+  display: none;
+}
 .filter-cost-label {
   font-size: 16px;
   line-height: 22px;
