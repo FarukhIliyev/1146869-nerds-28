@@ -67,6 +67,7 @@ html {
   list-style: none;
 }
 body {
+  position: relative;
   min-width: 1460px;
   margin: 0;
   padding: 0;
@@ -614,12 +615,8 @@ img {
   padding: 0;
   border: none;
 }
-.filter-grid-input,
-.filter-features-input {
-  display: none;
-}
 .filter-cost-legend {
-  padding-top: 63px;
+  padding-top: 55px;
 }
 .range-filter {
   width: 260px;
@@ -672,7 +669,7 @@ img {
 .price-controls {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 62px;
+  margin-bottom: 40px;
 }
 .price-controls label {
   text-transform: uppercase;
@@ -693,13 +690,15 @@ img {
 }
 .filter-grid-legend,
 .filter-features-legend {
+  padding-top: 6px;
   padding-bottom: 22px;
 }
 .filter-grid-list {
-  padding-bottom: 51px;
+  padding-bottom: 12px;
 }
 .filter-features {
-  padding-bottom: 48px;
+
+  padding-bottom: 30px;
 }
 .filter-features-button {
   width: 260px;
@@ -709,16 +708,21 @@ img {
 .filter-features-item {
   position: relative;
   padding-left: 36px;
-  padding-bottom: 25px;
+  padding-bottom: 21px;
+}
+.filter-features-item input[type=checkbox],
+.filter-grid-item input[type=radio] {
+  display: none;
 }
 .filter-grid-label::before {
   content: "";
   position: absolute;
   width: 25px;
   height: 25px;
-  top: -5px;
+  top: -1px;
   left: 0;
-  background-image: url("../img/icons/radio-off.svg");
+  background: url("../img/icons/radio-off.svg") no-repeat;
+  cursor: pointer;
   opacity: 0.4;
 }
 .filter-features-label::before {
@@ -729,13 +733,28 @@ img {
   top: 0;
   left: 0;
   background-image: url("../img/icons/checkbox-off.svg");
+  cursor: pointer;
   opacity: 0.4;
 }
+.filter-grid-item input[type=radio]:checked + .filter-grid-label::before {
+  background: url("../img/icons/radio-on.svg") no-repeat;
+  cursor: pointer;
+  opacity: 0.4;
+}
+.filter-features-item input[type=checkbox]:checked + .filter-features-label::before {
+  width: 26px;
+  background: url("../img/icons/checkbox-on.svg") no-repeat;
+  cursor: pointer;
+  opacity: 0.4;
+}
+.filter-grid-item .filter-grid-label:hover:before,
+.filter-grid-item .filter-grid-label:focus:before,
+.filter-features-item .filter-features-label:hover:before,
+.filter-features-item .filter-features-label:focus:before {
+  opacity: 1;
+}
 
-/*.filter-cost-legend {
-  padding-top: 60px;
-  padding-bottom: 60px;
-}*/
+
 .filter-grid-label,
 .filter-features-label {
   font-size: 16px;
@@ -751,6 +770,7 @@ img {
   font-weight: 500;
   font-style: normal;
   background-color: var(--basic-light-silver);
+  text-transform: uppercase;
   border: none;
   border-radius: 3px;
 }
@@ -963,7 +983,27 @@ img {
   margin: 0;
 }                                                                                /*--модальное окно--*/
 .modal {
-  display: none;
+  /*display: none;*/
+  position: absolute;
+  left: 240px;
+  width: 960px;
+  height: 590px;
+  border: 1px solid black;
+}
+.modal-wrapper {
+  padding-top: 70px;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 80px;
+}
+.modal-form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.modal-input {
+  width: 358px;
+  padding: 15px;
 }
 .modal-title {
   font-size: 45px;
@@ -983,10 +1023,13 @@ img {
   border-color: var(--basic-light-silver);
 }
 .modal-button-send {
+  position: absolute;
+  top: 1200px;
   font-size: 16px;
   line-height: 18px;
   color: var(--basic-white);
   font-weight: 500;
   font-style: normal;
   background-color: var(--basic-light-red);
+  border: 0;
 }
