@@ -984,14 +984,20 @@ img {
 }                                                                                /*--модальное окно--*/
 .modal {
   /*display: none;*/
-  position: absolute;
-  left: 240px;
+  position: fixed;
+  z-index: 100;
+  top: 50%;
+  left: 50%;
   width: 960px;
   height: 590px;
-  border: 1px solid black;
+  margin-left: -480px;
+  margin-top: -300px;
+  padding-bottom: 85px;
+  background-color: var(--basic-white);
+  box-shadow: 0 0 30px 10px var(--special-gray);
+  border-radius: 5px;
 }
 .modal-wrapper {
-  padding-top: 70px;
   padding-left: 100px;
   padding-right: 100px;
   padding-bottom: 80px;
@@ -1000,30 +1006,44 @@ img {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-}
-.modal-input {
-  width: 358px;
-  padding: 15px;
+  align-content: flex-start;
 }
 .modal-title {
   font-size: 45px;
   line-height: 53px;
+  margin: 0;
+  padding-top: 73px;
+  padding-left: 103px;
   color: var(--basic-black);
   font-weight: bold;
   font-style: normal;
 }
 .modal-label {
-  font-size: 16px;
-  line-height: 18px;
+  display: inline-block;
+  width: 360px;
   color: var(--basic-black);
   font-weight: bold;
   font-style: normal;
+}
+.modal-input,
+.modal-textarea {
+  display: inline-block;
+  width: 360px;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: normal;
+  font-style: normal;
+  border: 2px solid var(--special-gray);
+  border-radius: 5px;
+  padding: 15px;
+}
+.modal-textarea {
+  width: 760px;
 }
 .modal-input input::placeholder:hover {
   border-color: var(--basic-light-silver);
 }
 .modal-button-send {
-  position: absolute;
   top: 1200px;
   font-size: 16px;
   line-height: 18px;

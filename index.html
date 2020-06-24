@@ -275,18 +275,20 @@
     </footer>
     <section class="modal">
       <h2 class="modal-title">Напишите нам</h2>
-      <div class="modal-wrapper">  
-        <button class="modal-button-close btn" type="button" aria-label="Закрыть модальное окно">x</button>
-          <form class="modal-form" action="https://echo.htmlacademy.ru/courses" method="post">
-            <label class="modal-label" for="name-field">Ваше имя:</label>
+      <button class="modal-close btn" type="button" aria-label="Закрыть модальное окно">x</button>
+      <div class="modal-wrapper">
+        <form class="modal-form" action="https://echo.htmlacademy.ru/courses" method="post">
+          <label class="modal-label" for="name-field">Ваше имя:
             <input class="modal-input" type="text" name="name" id="name-field" placeholder="Имя Фамилия">
-            <label class="modal-label" for="email-field">Ваш email:</label>
+          </label>
+          <label class="modal-label" for="email-field">Ваш email:
             <input class="modal-input" type="text" name="email" id="email-field" placeholder="email@example.com">
-            <label class="modal-label" for="massage">Текст письма:</label>
-            <textarea class="modal-textarea" name="massage" id="massage" rows="8" cols="50" aria-label="Напишите нам" placeholder="В свободной форме">
-            </textarea>
-            <button class="modal-button-send button" type="submit" name="feedback">Отправить</button>
-          </form>
+          </label>
+          <label class="modal-label" for="massage">Текст письма:
+            <textarea class="modal-textarea" name="massage" id="massage" rows="8" cols="50" aria-label="Напишите нам" placeholder="В свободной форме"></textarea>
+          </label>
+          <button class="modal-button-send button" type="submit" name="feedback">Отправить</button>
+        </form>
       </div>
     </section>
   </body>
