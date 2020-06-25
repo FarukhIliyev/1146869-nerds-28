@@ -997,6 +997,18 @@ img {
   box-shadow: 0 0 30px 10px var(--special-gray);
   border-radius: 5px;
 }
+.modal-close {
+  /*display: none;*/
+}
+.btn {
+  position: absolute;
+  top: 80px;
+  right: 90px;
+  width: 27px;
+  height: 27px;
+  background-image: url("../img/icons/close-cross.svg");
+  cursor: pointer;
+}
 .modal-wrapper {
   padding-left: 100px;
   padding-right: 100px;
@@ -1012,7 +1024,7 @@ img {
   font-size: 45px;
   line-height: 53px;
   margin: 0;
-  padding-top: 73px;
+  padding-top: 61px;
   padding-left: 103px;
   color: var(--basic-black);
   font-weight: bold;
@@ -1029,22 +1041,33 @@ img {
 .modal-textarea {
   display: inline-block;
   width: 360px;
+  margin-top: 10px;
   font-size: 16px;
   line-height: 18px;
   font-weight: normal;
   font-style: normal;
   border: 2px solid var(--special-gray);
-  border-radius: 5px;
+  border-radius: 3px;
   padding: 15px;
 }
 .modal-textarea {
   width: 760px;
+  height: 118px;
+  resize: none;
+}
+.modal-login {
+  margin-top: 37px;
+}
+.modal-text {
+  margin-top: 30px;
 }
 .modal-input input::placeholder:hover {
   border-color: var(--basic-light-silver);
 }
 .modal-button-send {
-  top: 1200px;
+  position: absolute;
+  top: 456px;
+  width: 260px;
   font-size: 16px;
   line-height: 18px;
   color: var(--basic-white);
