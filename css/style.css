@@ -20,6 +20,7 @@
   --special: #666666;
   --special-gray: #888888;
   --basic-light-gray: #E1E1E1;
+  --basic-gray-dark: #4d4d4d;
 }
 @font-face {
   font-family: 'Roboto';
@@ -697,12 +698,7 @@ img {
   padding-bottom: 12px;
 }
 .filter-features {
-
   padding-bottom: 30px;
-}
-.filter-features-button {
-  width: 260px;
-  height: 50px;
 }
 .filter-grid-item,
 .filter-features-item {
@@ -753,8 +749,6 @@ img {
 .filter-features-item .filter-features-label:focus::before {
   opacity: 1;
 }
-
-
 .filter-grid-label,
 .filter-features-label {
   font-size: 16px;
@@ -762,6 +756,10 @@ img {
   color: var(--basic-light-dark);
   font-weight: normal;
   font-style: normal;
+}
+.filter-features-button {
+  width: 260px;
+  height: 50px;
 }
 .filter-features-button {
   font-size: 16px;
@@ -780,6 +778,7 @@ img {
 }
 .filter-features-button:active {
   background-color: var(--basic-silver-dark);
+  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1)
 }
 .catalog-container {
   display: flex;
@@ -804,12 +803,17 @@ img {
 .sort-list {
   display: flex;
   justify-content: space-around;
-  width: 272px;
+  width: 300px;
+  margin-right: 72px;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
+}
+.sort-switch {
+  width: 40px;
+  height: 10px;
 }
 .catalog {
   display: grid;
@@ -817,11 +821,13 @@ img {
   grid-template-rows: 578px 578px 578px;
   column-gap: 43px;
   row-gap: 73px;
-  margin-bottom: 140px;
+  margin-bottom: 56px;
 }
 .catalog-item {
   position: relative;
-
+}
+.catalog-item:hover .catalog-wrapper {
+  display: block;
 }
 .catalog-item::before {
   content: "";
@@ -832,7 +838,20 @@ img {
   background: var(--basic-silver-dark);
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-
+}
+.catalog-item::after {
+  content: "";
+  position: absolute;
+  left: 40px;
+  top: -25px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: var(--basic-white);
+  box-shadow: 25px 0 0 0 var(--basic-white), -25px 0 0 0 var(--basic-white);
+}
+.catalog-item:hover::before {
+  background: var(--basic-gray-dark);
 }
 .catalog-img {
   border: 1px solid var(--basic-silver);
@@ -843,12 +862,20 @@ img {
 .catalog-item:focus {
   box-shadow: 0 0 10px 2px rgba(221, 221, 221, 1);
 }
-.catalog-wrapper {
-  display: none;
-}
 .catalog-wrapper:hover,
 .catalog-wrapper:focus {
   display: block;
+}
+.catalog-wrapper {
+  display: none;
+  position: absolute;
+  top: 345px;
+  width: 358px;
+  height: 235px;
+  z-index: 20;
+  background-color: var(--basic-light-silver);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 .catalog-text {
   width: 255px;
@@ -918,37 +945,49 @@ img {
 }
 .pagination {
   width: 443px;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 .pagination-list {
   display: flex;
 }
 .pagination-item {
-  border: 3px solid var(--basic-light-silver);
   text-align: center;
-  border-radius: 5px;
-  margin-right: 11px;
 }
 .pagination-link {
   display: inline-block;
   padding-top: 13px;
   padding-left: 18px;
   padding-right: 18px;
-  padding-bottom: 13px;
+  padding-bottom: 15px;
+  font-size: 16px;
+  line-height: 18px;
+  background-color: var(--basic-light-silver);
   color: var(--basic-black);
+  border: 3px solid var(--basic-light-silver);
+  border-radius: 5px;
+  margin-right: 11px;
+  text-transform: uppercase;
+  font-weight: bold
+}
+.pagination-pressed {
+  background-color: var(--basic-white);
 }
 .pagination-next {
-  width: 260px;
-  height: 50px;
+  width: 254px;
+  height: 46px;
+  padding-bottom: 33px;
 }
-.pagination-link:hover,
-.pagination-link:focus {
+.pagination-link[href]:hover,
+.pagination-link[href]:focus {
   background-color: var(--basic-silver);
+  border: 3px solid var(--basic-silver);
 }
-.pagination-link:active {
-  background-color: var(--basic-white);
-  border: 2px solid var(--special-gray);
+.pagination-link[href]:active {
+  background-color: var(--basic-silver-dark);
+  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+  border: 3px solid var(--basic-silver-dark);
 }
+
                                                                                 /*--подвал--*/
 .footer {
   display: flex;
@@ -1012,7 +1051,7 @@ img {
   margin: 0;
 }                                                                                /*--модальное окно--*/
 .modal {
-  /*display: none;*/
+  display: none;
   position: fixed;
   z-index: 100;
   top: 50%;
