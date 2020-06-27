@@ -139,7 +139,6 @@ img {
   height: 15px;
   background-image: url("../img/icons/cart-icon.svg");
   background-repeat: no-repeat;
-
 }
 .user-navigation .user-navigation-link {
   position: relative;
@@ -796,6 +795,8 @@ img {
 .sort-title {
   width: 134px;
   margin: 0;
+  margin-right: 220px;
+  font-size: 18px;
   font-weight: bold;
   font-style: normal;
   text-transform: uppercase;
@@ -804,7 +805,6 @@ img {
   display: flex;
   justify-content: space-around;
   width: 300px;
-  margin-right: 72px;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -812,8 +812,24 @@ img {
   text-transform: uppercase;
 }
 .sort-switch {
+  display: flex;
+  justify-content: space-between;
   width: 40px;
+  height: 13px;
+  margin-top: 5px;
+}
+.sort-switch-down {
+  width: 10px;
   height: 10px;
+  background-image: url("../img/icons/icon-down-dir.svg");
+  cursor: pointer;
+}
+.sort-switch-up {
+  width: 10px;
+  height: 10px;
+  background-image: url("../img/icons/icon-up-dir.svg");
+  opacity: 0.2;
+  cursor: pointer
 }
 .catalog {
   display: grid;
