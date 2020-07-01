@@ -87,8 +87,15 @@ img {
 .feedback {
   color: black;
 }
+.feedback a {
+  font-size: 22px;
+  line-height: 30px;
+  color: #000000;
+}
 .feedback p {
   margin-bottom: inherit;
+  font-size: 14px;
+  line-height: 20px;
 }
 /**>*{
   outline: 1px solid var(--basic-black);
@@ -185,6 +192,7 @@ img {
 .slider-label {
   position: relative;
   display: inline-block;
+  vertical-align: top;
   height: 18px;
   padding: 17px;
   border-radius: 50%;
