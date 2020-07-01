@@ -1070,7 +1070,7 @@ img {
   display: none;
   position: fixed;
   z-index: 100;
-  top: 50%;
+  top: 10%;
   left: 50%;
   width: 960px;
   height: 590px;
@@ -1081,17 +1081,35 @@ img {
   box-shadow: 0 0 30px 10px var(--special-gray);
   border-radius: 5px;
 }
-.modal-close {
-  /*display: none;*/
+.modal-show {
+  display: block;
 }
-.btn {
+.modal-close {
   position: absolute;
   top: 80px;
   right: 90px;
   width: 27px;
   height: 27px;
-  background-image: url("../img/icons/close-cross.svg");
   cursor: pointer;
+  background: none;
+  border: none;
+}
+.modal-close::before,
+.modal-close::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 2px;
+  width: 29px;
+  height: 3px;
+  background-color: var(--basic-black);
+  cursor: pointer;
+}
+.modal-close::before {
+  transform: rotate(45deg);
+}
+.modal-close::after {
+  transform: rotate(-45deg);
 }
 .modal-wrapper {
   padding-left: 100px;
