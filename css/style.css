@@ -72,7 +72,6 @@ body {
   min-width: 1460px;
   margin: 0;
   padding: 0;
-  background-color: #ffffff;
   font-family: 'Roboto', 'Arial', sans-serif;
   line-height: 1.2;
   color: var(--basic-black);
@@ -108,8 +107,8 @@ img {
   color: var(--basic-black);
   font-weight: 500;
   font-style: normal;
-  margin-left: 20px;
   padding-top: 74px;
+  padding-right: 18px;
   padding-bottom: 108px;
   margin: 0;
   background-color: var(--basic-light-silver);
@@ -430,7 +429,7 @@ img {
   grid-template-columns: 1fr 1fr;
   column-gap: 20px;
   padding-top: 26px;
-  padding-bottom: 60px;
+  padding-bottom: 50px;
   border-bottom: 2px solid var(--basic-silver);
 }
 .company-about {
@@ -457,7 +456,7 @@ img {
   padding-top: 24px;
   padding-bottom: 15px;
   font-size: 16px;
-  line-height: 25px;
+  line-height: 28px;
   color: var(--basic-light-dark);
   font-weight: bold;
   font-style: normal;
@@ -468,13 +467,23 @@ img {
   margin-top: 8px;
 }
 .company-item {
+  position: relative;
   padding-left: 36px;
   padding-bottom: 22px;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 26px;
   color: var(--basic-light-dark);
   font-weight: normal;
   font-style: normal;
+}
+.company-item::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 0px;
+  width: 25px;
+  height: 2px;
+  background-color: var(--basic-red);
 }
 .company-img {
   margin-top: 10px;
@@ -526,11 +535,11 @@ img {
                                                                                 /*--бренды--*/
 .clients {
   padding: 0;
-  margin-bottom: 84px;
+  margin-bottom: 78px;
   padding-top: 40px;
   padding-left: 30px;
   padding-right: 30px;
-  padding-bottom: 40px;
+  padding-bottom: 47px;
   border-bottom: 2px solid var(--basic-silver);
 }
 .clients-list {
@@ -553,6 +562,7 @@ img {
   position: relative;
   display: block;
   width: 1440px;
+  height: 416px;
   margin: 0 auto;
 }
 .map-contact {
@@ -690,8 +700,8 @@ img {
 }
 .filter-grid-legend,
 .filter-features-legend {
-  padding-top: 6px;
-  padding-bottom: 22px;
+  padding-top: 11px;
+  padding-bottom: 17px;
 }
 .filter-grid-list {
   padding-bottom: 12px;
@@ -971,6 +981,7 @@ img {
 }
 .pagination-link {
   display: inline-block;
+  margin-right: 11px;
   padding-top: 13px;
   padding-left: 18px;
   padding-right: 18px;
@@ -981,7 +992,6 @@ img {
   color: var(--basic-black);
   border: 3px solid var(--basic-light-silver);
   border-radius: 5px;
-  margin-right: 11px;
   text-transform: uppercase;
   font-weight: bold
 }
@@ -1024,8 +1034,8 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 81px;
-  height: 81px;
+  width: 80px;
+  height: 80px;
   background-color: var(--basic-light-gray);
   border-radius: 50%;
   color: inherit;
@@ -1053,14 +1063,14 @@ img {
 }
 .footer-offering-text {
   font-size: 16px;
-  line-height: 22px;
+  line-height: 16px;
   color: var(--rare);
   font-weight: normal;
   font-style: normal;
 }
 .footer-social-item {
-  width: 81px;
-  height: 81px;
+  width: 80px;
+  height: 80px;
   margin-right: 9px;
 }
 .footer-social-item:nth-child(3n) {
