@@ -325,6 +325,7 @@ img {
 }
 .offers-item {
   width: 300px;
+  background-image: url("");
 }
 .offers-caption {
   font-size: 24px;
@@ -446,7 +447,7 @@ img {
 }
 .company-caption {
   font-size: 45px;
-  line-height: 45px;
+  line-height: 49px;
   color: var(--basic-black);
   font-weight: 500;
   font-style: normal;
@@ -454,7 +455,7 @@ img {
 }
 .company-text {
   font-size: 16px;
-  line-height: 24px;
+  line-height: 22px;
   color: var(--basic-light-dark);
   font-weight: normal;
   font-style: normal;
@@ -494,7 +495,7 @@ img {
   background-color: var(--basic-red);
 }
 .company-img {
-  margin-top: 10px;
+  margin-top: 14px;
 }
 .company-title {
   display: block;
@@ -534,8 +535,8 @@ img {
   text-align: left;
 }
 .indicators {
-  font-size: 16px;
-  line-height: 18px;
+  font-size: 15px;
+  line-height: 20px;
   color: var(--basic-light-dark);
   font-weight: normal;
   font-style: normal;
@@ -544,11 +545,17 @@ img {
 .clients {
   padding: 0;
   margin-bottom: 78px;
-  padding-top: 40px;
+  padding-top: 50px;
   padding-left: 30px;
-  padding-right: 30px;
-  padding-bottom: 47px;
+  padding-bottom: 40px;
   border-bottom: 2px solid var(--basic-silver);
+}
+.clients-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.clients-item {
+  width: 19%
 }
 .clients-list {
   display: flex;
@@ -569,7 +576,7 @@ img {
 .map {
   position: relative;
   display: block;
-  width: 1440px;
+  /*width: 1440px;*/
   height: 416px;
   margin: 0 auto;
 }
@@ -990,6 +997,7 @@ img {
 }
 .pagination-link {
   display: inline-block;
+  vertical-align: top;
   margin-right: 11px;
   padding-top: 13px;
   padding-left: 18px;
@@ -1063,7 +1071,7 @@ img {
 .footer-offering-title {
   width: 660px;
   font-size: 36px;
-  line-height: 36px;
+  line-height: 44px;
   margin: 0;
   color: var(--basic-black);
   font-weight: bold;
@@ -1071,7 +1079,7 @@ img {
 }
 .footer-offering-text {
   font-size: 16px;
-  line-height: 16px;
+  line-height: 4px;
   color: var(--rare);
   font-weight: normal;
   font-style: normal;
@@ -1153,6 +1161,7 @@ img {
 }
 .modal-label {
   display: inline-block;
+  vertical-align: top;
   width: 360px;
   color: var(--basic-black);
   font-weight: bold;
@@ -1161,6 +1170,7 @@ img {
 .modal-input,
 .modal-textarea {
   display: inline-block;
+  vertical-align: top;
   width: 360px;
   margin-top: 10px;
   font-size: 16px;
