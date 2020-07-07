@@ -566,7 +566,6 @@ img {
 .clients-list a:active {
   opacity: 0.3;
 }
-/*--карта--*/
 .map {
   position: relative;
   display: block;
