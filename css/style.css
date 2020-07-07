@@ -184,7 +184,6 @@ img {
   font-style: normal;
   text-transform: uppercase;
 }
-/*--слайдер--*/
 .slider {
   display: block;
   position: relative;
@@ -312,7 +311,6 @@ img {
 .slide-link:active {
   background-color: var(--basic-dark-red);
 }
-/*--секция предложений--*/
 .offers {
   border-bottom: 2px solid var(--basic-silver);
 }
@@ -352,7 +350,6 @@ img {
   font-style: normal;
   text-transform: uppercase;
 }
-/*--кнопки--*/
 .button {
   display: block;
   width: 240px;
@@ -432,7 +429,6 @@ img {
 .button-yellow:active {
   color: var(--basic-light-gray);
 }
-/*--блок принципов--*/
 .company {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -541,7 +537,6 @@ img {
   font-weight: normal;
   font-style: normal;
 }
-/*--бренды--*/
 .clients {
   padding: 0;
   margin-bottom: 78px;
@@ -621,7 +616,6 @@ img {
   font-style: normal;
   text-transform: uppercase;
 }
-/*--фильтры--*/
 .filters {
   width: 260px;
   margin-right: 140px;
@@ -800,7 +794,6 @@ img {
 .catalog-container {
   display: flex;
 }
-/*--каталог--*/
 .catalog-sort {
   width: 760px;
 }
@@ -1023,7 +1016,6 @@ img {
   box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
   border: 3px solid var(--basic-silver-dark);
 }
-/*--подвал--*/
 .footer {
   display: flex;
   padding-top: 70px;
@@ -1085,7 +1077,6 @@ img {
 .footer-social-item:nth-child(3n) {
   margin: 0;
 }
-/*--модальное окно--*/
 .modal {
   display: none;
   position: fixed;
