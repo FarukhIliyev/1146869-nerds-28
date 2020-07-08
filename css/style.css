@@ -574,8 +574,8 @@ img {
   margin-left: 37px;
 }
 .clients-link-pink {
-  margin-top: 67;
   margin-left: 60px;
+  margin-top: 67;
 }
 .clients-link-mishka {
   margin-top: 52px;
@@ -583,7 +583,12 @@ img {
 }
 .clients-list a:hover,
 .clients-list a:focus {
+  transition: 1s;
   opacity: 1;
+}
+.clients-list a:not(:hover),
+.clients-list a:not(:focus) {
+  transition: 1s;
 }
 .clients-list a:active {
   opacity: 0.3;
