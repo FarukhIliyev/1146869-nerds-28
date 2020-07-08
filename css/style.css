@@ -245,18 +245,18 @@ img {
   background-repeat: no-repeat;
   background-position: 99% 1px;
 }
-#product-1:checked ~ .slides .slide-item:nth-child(1) {
+.slider-product-one:checked ~ .slides .slide-item:nth-child(1) {
   display: block;
 }
-#product-2:checked ~ .slides .slide-item:nth-child(2) {
+.slider-product-two:checked ~ .slides .slide-item:nth-child(2) {
   display: block;
 }
-#product-3:checked ~ .slides .slide-item:nth-child(3) {
+.slider-product-three:checked ~ .slides .slide-item:nth-child(3) {
   display: block;
 }
-#product-1:checked ~ .slider-controls .slider-label:nth-child(1)::before,
-#product-2:checked ~ .slider-controls .slider-label:nth-child(2)::before,
-#product-3:checked ~ .slider-controls .slider-label:nth-child(3)::before {
+.slider-product-one:checked ~ .slider-controls .slider-label:nth-child(1)::before,
+.slider-product-two:checked ~ .slider-controls .slider-label:nth-child(2)::before,
+.slider-product-three:checked ~ .slider-controls .slider-label:nth-child(3)::before {
   content: "";
   position: absolute;
   left: 50%;
@@ -1126,6 +1126,10 @@ img {
 }
 .modal-show {
   display: block;
+  animation: bounce 1.1s;
+}
+.modal-error {
+  animation: shake 0.6s;
 }
 .modal-close {
   position: absolute;
@@ -1144,8 +1148,33 @@ img {
   top: 10px;
   left: 2px;
   width: 29px;
-  height: 3px;
-  background-color: var(--basic-black);
+  height: 4px;
+  background-color: var(--basic-light-red);
+  opacity: 0.3;
+  cursor: pointer;
+}
+.modal-close:hover::before,
+.modal-close:hover::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 2px;
+  width: 29px;
+  height: 4px;
+  background-color: var(--basic-red);
+  opacity: 1;
+  cursor: pointer;
+}
+.modal-close:active::before,
+.modal-close:active::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 2px;
+  width: 29px;
+  height: 4px;
+  background-color: var(--basic-light-red);
+  opacity: 0.1;
   cursor: pointer;
 }
 .modal-close::before {
@@ -1222,4 +1251,37 @@ img {
   font-style: normal;
   background-color: var(--basic-light-red);
   border: 0;
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+  70% {
+    transform: translateY(30px);
+  }
+  90% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
 }

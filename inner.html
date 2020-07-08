@@ -284,10 +284,10 @@
       <div class="modal-wrapper">
         <form class="modal-form" action="https://echo.htmlacademy.ru/courses" method="post">
           <label class="modal-label modal-login" for="name-field">Ваше имя:
-            <input class="modal-input" type="text" name="name" id="name-field" placeholder="Имя Фамилия">
+            <input class="modal-input modal-input-login" type="text" name="name" id="name-field" placeholder="Имя Фамилия">
           </label>
           <label class="modal-label modal-login" for="email-field">Ваш email:
-            <input class="modal-input" type="text" name="email" id="email-field" placeholder="email@example.com">
+            <input class="modal-input modal-input-email" type="text" name="email" id="email-field" placeholder="email@example.com">
           </label>
           <label class="modal-label modal-text" for="massage">Текст письма:
             <textarea class="modal-textarea" name="massage" id="massage" aria-label="Напишите нам" placeholder="В свободной форме"></textarea>
@@ -299,14 +299,50 @@
     <script>
       var link = document.querySelector(".map-contact-button");
       var popup = document.querySelector(".modal-login");
-      var close = document.querySelector(".modal-close");
+      var modalclose = document.querySelector(".modal-close");
+      var modalform = document.querySelector(".modal-form");
+      var modallogin = document.querySelector(".modal-input-login");
+      var modalemail = document.querySelector(".modal-input-email");
+      var isStorageSupport = true;
+      var storage = "";
+      try {
+        storage = localStorage.getItem("login");
+      } catch (err) {
+        isStorageSupport = false;
+      }
       link.addEventListener("click", function (evt) {
         evt.preventDefault();
         popup.classList.add("modal-show");
+        if (storage) {
+          modallogin.value = storage;
+          modalemail.focus();
+        } else {
+          modallogin.focus();
+        }
       });
-      close.addEventListener("click", function (evt) {
+      modalclose.addEventListener("click", function (evt) {
         evt.preventDefault();
         popup.classList.remove("modal-show");
+        popup.classList.remove("modal-error");
+      });
+      modalform.addEventListener("submit", function (evt) {
+        if (!modallogin.value || !modalemail.value) {
+          evt.preventDefault();
+          popup.classList.add("modal-error");
+        } else {
+          if (isStorageSupport) {
+            localStorage.setItem("login", modallogin.value);
+          }
+        }
+      });
+      window.addEventListener("keydown", function (evt) {
+        if (evt.keyCode === 27) {
+          if (popup.classList.contains("modal-show")) {
+            evt.preventDefault();
+            popup.classList.remove("modal-show");
+            popup.classList.remove("modal-error");
+          }
+        }
       });
     </script>
   </body>
