@@ -15,12 +15,11 @@
   --basic-dark-green: #00AA62;
   --basic-light-yellow: #EFC849;
   --basic-yellow: #EAB534;
-  --basic-dark-yellow: #E5A722;
+  --basic-light-gray: #E1E1E1;
+  --basic-gray-dark: #4d4d4d;
   --rare: #444444;
   --special: #666666;
   --special-gray: #888888;
-  --basic-light-gray: #E1E1E1;
-  --basic-gray-dark: #4d4d4d;
 }
 @font-face {
   font-family: 'Roboto';
@@ -434,7 +433,7 @@ img {
   grid-template-columns: 1fr 1fr;
   column-gap: 20px;
   padding-top: 26px;
-  padding-bottom: 50px;
+  padding-bottom: 42px;
   border-bottom: 2px solid var(--basic-silver);
 }
 .company-about {
@@ -540,19 +539,47 @@ img {
 .clients {
   padding: 0;
   margin-bottom: 78px;
-  padding-top: 50px;
-  padding-left: 30px;
-  padding-bottom: 40px;
+  /*padding-top: 50px;
+  padding-bottom: 38px;*/
   border-bottom: 2px solid var(--basic-silver);
 }
 .clients-list {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-right: 64px;
+}
+.clients-item {
+  position: relative;
+  width: 25%;
+  height: 180px;
+}
+.clients-item:nth-child(-n+3)::before {
+  content: "";
+  position: absolute;
+  top: 35%;
+  right: 7px;
+  width: 2px;
+  height: 52px;
+  background-color: var(--basic-silver);
 }
 .clients-list a {
+  display: block;
   opacity: 0.2;
+}
+.clients-link-academy {
+  margin-top: 63px;
+  margin-left: 32px;
+}
+.clients-link-borodinski {
+  margin-top: 46px;
+  margin-left: 37px;
+}
+.clients-link-pink {
+  margin-top: 67;
+  margin-left: 60px;
+}
+.clients-link-mishka {
+  margin-top: 52px;
+  margin-left: 75px;
 }
 .clients-list a:hover,
 .clients-list a:focus {
