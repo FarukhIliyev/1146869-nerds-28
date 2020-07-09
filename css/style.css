@@ -929,13 +929,14 @@ img {
 .catalog-wrapper:hover,
 .catalog-wrapper:focus {
   display: block;
+  box-shadow: 0 0 10px 2px var(--basic-special-silver);
 }
 .catalog-wrapper {
   display: none;
   position: absolute;
-  top: 345px;
+  top: 350px;
   width: 358px;
-  height: 235px;
+  height: auto;
   z-index: 20;
   background-color: var(--basic-light-silver);
   border-bottom-left-radius: 5px;
@@ -943,6 +944,7 @@ img {
 }
 .catalog-text {
   width: 255px;
+  height: 100%;
   text-align: center;
   margin-left: 52px;
 }
@@ -1001,6 +1003,8 @@ img {
   font-style: normal;
 }
 .catalog-link {
+  margin-top: 33px;
+  margin-bottom: 44px;
   font-size: 16px;
   line-height: 18px;
   color: var(--basic-white);
