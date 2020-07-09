@@ -26,7 +26,7 @@
               <a class="site-navigation-link" href="#">Клиенты</a>
             </li>
             <li class="site-navigation-item">
-              <a class="site-navigation-link">Магазин</a>
+              <a class="site-navigation-link active">Магазин</a>
             </li>
             <li class="site-navigation-item">
               <a class="site-navigation-link" href="#">Контакты</a>
@@ -70,7 +70,7 @@
               <legend class="filter-grid-legend legend">Сетка:</legend>
                 <ul class="filter-grid-list reset-list">
                   <li class="filter-grid-item">
-                    <input class="filter-grid-input" type="radio" name="grid" id="filter-adaptive" value="adaptive" checked="checked">
+                    <input class="filter-grid-input" type="radio" name="grid" id="filter-adaptive" value="adaptive" checked="checked" readonly="readonly">
                     <label class="filter-grid-label" for="filter-adaptive">Адаптивная</label>
                   </li>
                   <li class="filter-grid-item">
@@ -87,7 +87,7 @@
               <legend class="filter-features-legend legend">Особенности:</legend>
                 <ul class="filter-features reset-list">
                   <li class="filter-features-item">
-                    <input class="filter-features-input" type="checkbox" name="features" id="filter-slider" value="slider" checked="checked">
+                    <input class="filter-features-input" type="checkbox" name="features" id="filter-slider" value="slider" checked="checked" readonly>
                     <label class="filter-features-label" for="filter-slider">Слайдер</label>
                   </li>
                   <li class="filter-features-item">
@@ -296,54 +296,6 @@
         </form>
       </div>
     </section>
-    <script>
-      var link = document.querySelector(".map-contact-button");
-      var popup = document.querySelector(".modal-login");
-      var modalclose = document.querySelector(".modal-close");
-      var modalform = document.querySelector(".modal-form");
-      var modallogin = document.querySelector(".modal-input-login");
-      var modalemail = document.querySelector(".modal-input-email");
-      var isStorageSupport = true;
-      var storage = "";
-      try {
-        storage = localStorage.getItem("login");
-      } catch (err) {
-        isStorageSupport = false;
-      }
-      link.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        popup.classList.add("modal-show");
-        if (storage) {
-          modallogin.value = storage;
-          modalemail.focus();
-        } else {
-          modallogin.focus();
-        }
-      });
-      modalclose.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        popup.classList.remove("modal-show");
-        popup.classList.remove("modal-error");
-      });
-      modalform.addEventListener("submit", function (evt) {
-        if (!modallogin.value || !modalemail.value) {
-          evt.preventDefault();
-          popup.classList.add("modal-error");
-        } else {
-          if (isStorageSupport) {
-            localStorage.setItem("login", modallogin.value);
-          }
-        }
-      });
-      window.addEventListener("keydown", function (evt) {
-        if (evt.keyCode === 27) {
-          if (popup.classList.contains("modal-show")) {
-            evt.preventDefault();
-            popup.classList.remove("modal-show");
-            popup.classList.remove("modal-error");
-          }
-        }
-      });
-    </script>
+    <script src="login.js"></script>
   </body>
 </html>

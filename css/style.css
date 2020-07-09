@@ -1,5 +1,7 @@
 :root {
   --basic-black: #000000;
+  --basic-special-white: rgba(0, 1, 1, 0.1);
+  --basic-special-silver: rgba(221, 221, 221, 1);
   --basic-extra-dark: #FB565A;
   --basic-light-dark: #283136;
   --basic-dark: #D7373B;
@@ -103,7 +105,6 @@ img {
   width: 1160px;
   margin: 0 auto;
 }
-/*--шапка--*/
 .page-header {
   padding-top: 50px;
   background-color: var(--basic-light-silver);
@@ -160,9 +161,9 @@ img {
 }
 .site-navigation-list a,
 .user-navigation a {
-  color: var(--basic-black);
   display: block;
   margin-top: 16px;
+  color: var(--basic-black);
 }
 .site-navigation-list a[href]:hover,
 .site-navigation-list a[href]:focus,
@@ -182,6 +183,9 @@ img {
   font-weight: 500;
   font-style: normal;
   text-transform: uppercase;
+}
+.site-navigation-list .active {
+  border-bottom: 2px solid var(--basic-red);
 }
 .slider {
   display: block;
@@ -387,7 +391,7 @@ img {
 }
 .button:active {
   background-color: var(--basic-dark-red);
-  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+  box-shadow: inset 0 3px 0 var(--basic-special-white);
   color: var(--basic-light-gray);
 }
 .button-red {
@@ -399,7 +403,7 @@ img {
 }
 .button-red:active {
   background-color: var(--basic-dark-red);
-  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+  box-shadow: inset 0 3px 0 var(--basic-special-white);
 }
 .button-green {
   background-color: var(--basic-light-green);
@@ -410,7 +414,7 @@ img {
 }
 .button-green:active {
   background-color: var(--basic-dark-green);
-  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+  box-shadow: inset 0 3px 0 var(--basic-special-white);
 }
 .button-yellow {
   background-color: var(--basic-light-yellow);
@@ -421,7 +425,7 @@ img {
 }
 .button-yellow:active {
   background-color: var(--basic-dark-yellow);
-  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+  box-shadow: inset 0 3px 0 var(--basic-special-white);
 }
 .button-red:active,
 .button-green:active,
@@ -821,7 +825,7 @@ img {
 }
 .filter-features-button:active {
   background-color: var(--basic-silver-dark);
-  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1)
+  box-shadow: inset 0 3px 0 var(--basic-special-white);
 }
 .catalog-container {
   display: flex;
@@ -920,7 +924,7 @@ img {
 }
 .catalog-item:hover,
 .catalog-item:focus {
-  box-shadow: 0 0 10px 2px rgba(221, 221, 221, 1);
+  box-shadow: 0 0 10px 2px var(--basic-special-silver);
 }
 .catalog-wrapper:hover,
 .catalog-wrapper:focus {
@@ -1045,7 +1049,7 @@ img {
 }
 .pagination-link[href]:active {
   background-color: var(--basic-silver-dark);
-  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+  box-shadow: inset 0 3px 0 var(--basic-special-white);
   border: 3px solid var(--basic-silver-dark);
 }
 .footer {
@@ -1079,7 +1083,7 @@ img {
 }
 .footer-social-link:active {
   background-color: var(--basic-red);
-  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+  box-shadow: inset 0 3px 0 var(--basic-special-white);
 }
 .footer-social-link:active path,
 .footer-social-link:active path{

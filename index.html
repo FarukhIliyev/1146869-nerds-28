@@ -162,7 +162,7 @@
         <h2 class="visually-hidden">Наши партнёры</h2>
         <ul class="clients-list reset-list">
           <li class="clients-item">
-            <a class="clients-link-academy" href="https://htmlacademy.ru/" aria-label="HTML Academy">
+            <a class="clients-link-academy" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="HTML Academy">
               <svg width="199" height="68" viewbox="0 0 199 68" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M82.1429 49.4881C82.4922 49.4881 82.8414 49.3834 83.1557 49.3135V51.7582C82.5271 52.0027 81.7588 52.1424 80.9904 52.1424C79.5934 52.1424 78.4759 51.5836 77.9171 50.3612C76.4153 51.5836 74.5294 52.3519 72.1196 52.3519C69.3256 52.3519 66.7412 50.8153 66.7412 47.6371C66.7412 43.6907 70.3734 42.5032 73.5864 42.5032C74.9135 42.5032 76.3804 42.6778 77.5678 42.9572V42.3985C77.5678 40.4776 76.1708 39.1505 73.5515 39.1505C71.2814 39.1505 69.3955 39.7093 68.0334 40.3379V37.1947C69.2558 36.7756 71.456 36.1819 73.9007 36.1819C78.2314 36.1819 80.9904 38.2424 80.9904 42.8874V48.3705C81.0253 49.2087 81.5143 49.4881 82.1429 49.4881ZM70.2686 47.3927C70.2686 48.8944 71.5957 49.6628 73.1324 49.6628C74.7739 49.6628 76.3455 49.069 77.5678 47.8467V45.2623C76.6249 45.0876 75.3326 44.8781 74.25 44.8781C72.3291 44.8781 70.2686 45.4718 70.2686 47.3927Z" fill="black"/>
                 <path d="M93.0393 36.1469C94.7506 36.1469 96.427 36.531 97.7542 37.3343V40.4775C96.6366 39.6742 95.065 39.1853 93.4934 39.1853C90.7693 39.1853 88.0451 40.6172 88.0451 44.2493C88.0451 47.7418 90.6994 49.3134 93.4584 49.3134C95.0999 49.3134 96.7064 48.8245 97.9288 48.126V51.3041C96.462 52.0026 94.7856 52.3518 92.8647 52.3518C88.7786 52.3518 84.5876 49.8722 84.5876 44.389C84.5527 38.6265 88.9532 36.1469 93.0393 36.1469Z" fill="black"/>
@@ -222,7 +222,7 @@
       </section>
       <section class="map">
         <h2 class="visually-hidden">Схема проезда</h2>
-        <script charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4cd6d1861e1e23eaacd8906e2ce1081f1865bc7e3c0e9e73deee51dbb5526703&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6177152371363!2d30.322328566925293!3d59.9384853838886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2skz!4v1594276338672!5m2!1sru!2skz" width="3000" height="416" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
           <section class="map-contact">
             <h2 class="visually-hidden">Наш контактный адрес</h2>
             <p class="map-contact-caption">Nёrds design studio</p>
@@ -291,54 +291,6 @@
         </form>
       </div>
     </section>
-    <script>
-      var link = document.querySelector(".map-contact-button");
-      var popup = document.querySelector(".modal-login");
-      var modalclose = document.querySelector(".modal-close");
-      var modalform = document.querySelector(".modal-form");
-      var modallogin = document.querySelector(".modal-input-login");
-      var modalemail = document.querySelector(".modal-input-email");
-      var isStorageSupport = true;
-      var storage = "";
-      try {
-        storage = localStorage.getItem("login");
-      } catch (err) {
-        isStorageSupport = false;
-      }
-       link.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        popup.classList.add("modal-show");
-        if (storage) {
-          modallogin.value = storage;
-          modalemail.focus();
-        } else {
-          modallogin.focus();
-        }
-      });
-      modalclose.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        popup.classList.remove("modal-show");
-        popup.classList.remove("modal-error");
-      });
-      modalform.addEventListener("submit", function (evt) {
-        if (!modallogin.value || !modalemail.value) {
-          evt.preventDefault();
-          popup.classList.add("modal-error");
-        } else {
-          if (isStorageSupport) {
-            localStorage.setItem("login", modallogin.value);
-          }
-        }
-      });
-      window.addEventListener("keydown", function (evt) {
-        if (evt.keyCode === 27) {
-          if (popup.classList.contains("modal-show")) {
-            evt.preventDefault();
-            popup.classList.remove("modal-show");
-            popup.classList.remove("modal-error");
-          }
-        }
-      });
-    </script>
+    <script src="login.js"></script>
   </body>
 </html>
