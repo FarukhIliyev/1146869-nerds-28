@@ -85,19 +85,7 @@ img {
   display: block;
   max-width: 100%;
 }
-.feedback {
-  color: black;
-}
-.feedback a {
-  font-size: 22px;
-  line-height: 30px;
-  color: #000000;
-}
-.feedback p {
-  margin-bottom: inherit;
-  font-size: 14px;
-  line-height: 20px;
-}
+.feedback a{font-size:22px;line-height:30px;color:#000}.feedback p{margin-bottom:inherit;font-size:14px;line-height:20px}
 /**>*{
   outline: 1px solid var(--basic-black);
 }*/
@@ -612,7 +600,7 @@ img {
 .map-wrapper {
   position: absolute;
   width: 100%;
-  left: 224px;
+  left: 232px;
   z-index: 10;
 }
 .map-contact {
