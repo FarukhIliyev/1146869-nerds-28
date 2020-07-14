@@ -602,26 +602,22 @@ img {
   left: 960px;
   z-index: 1;
 }
-.map-wrapper {
-  position: relative;
-  z-index: 10;
-}
-.map-wrapper iframe {
+.map iframe {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 416px;
   margin: 0 auto;
+  z-index: 20;
 }
 .map-contact {
   position: absolute;
-  top: 50%;
+  top: 55px;
   left: 0;
   width: 320px;
   height: 310px;
   z-index: 20;
-  margin-top: -155px;
   padding: 40px 50px;
   background-color: var(--basic-white);
 }
@@ -804,6 +800,15 @@ img {
   background: url("../img/icons/checkbox-on.svg") no-repeat;
   cursor: pointer;
   opacity: 0.4;
+}
+.filter-features-item input[type=checkbox]:disabled + .filter-features-label::before,
+.filter-features-item input[type=checkbox]:checked:disabled + .filter-features-label::before,
+.filter-features-item input[type=checkbox]:disabled + .filter-features-label,
+.filter-grid-item input[type=radio]:disabled + .filter-grid-label::before,
+.filter-grid-item input[type=radio]:checked:disabled + .filter-grid-label::before,
+.filter-grid-item input[type=radio]:disabled + .filter-grid-label {
+  opacity: 0.3;
+  cursor: default;
 }
 .filter-grid-item .filter-grid-label:hover::before,
 .filter-grid-item .filter-grid-label:focus::before,
