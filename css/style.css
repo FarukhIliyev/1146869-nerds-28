@@ -88,7 +88,7 @@ img {
 .feedback a {
   font-size:22px;
   line-height:30px;
-  color: var(--basic-black);
+  color: #000000;
 }
 .feedback p {
    margin-bottom:inherit;
